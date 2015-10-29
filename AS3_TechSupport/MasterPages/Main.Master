@@ -12,10 +12,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-
+            <h1 class="headerTitle">Tech Support</h1>
         </div>
 
         <div class="navBar">
+
+            <asp:Menu ID="mnuNavBar" runat="server" CssClass="navBarMenu" DataSourceID="SiteMapSourceNavBar" MaximumDynamicDisplayLevels="0" Orientation="Horizontal" StaticDisplayLevels="2">
+            </asp:Menu>
 
         </div>
 
@@ -26,8 +29,9 @@
         </div>
 
         <div class="footer">
-
+            <p class ="copyright">&#169; 2015 Project Green Team</p>
         </div>
+        <asp:SiteMapDataSource ID="SiteMapSourceNavBar" runat="server" />
     </form>
 </body>
 </html>

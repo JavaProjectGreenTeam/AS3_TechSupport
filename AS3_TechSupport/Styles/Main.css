@@ -1,2 +1,90 @@
-﻿body {
+﻿/*Default Tag Styles*/
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #F2F2F2;
 }
+
+h1 {
+    font-family: 'Century Gothic';
+    color: #FF9900;
+    font-weight: bold;
+}
+
+/*Div Class Styles*/
+.header {
+    background-color: #333333;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.navBar {
+    background-color: #333333;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #FF9900;
+}
+
+.content {
+    width: 800px;
+    background-color: #C0C0C0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: #333333;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Element Class Styles*/
+.headerTitle {
+    margin: 0px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 3em;
+}
+
+.copyright {
+    font-family: 'Century Gothic';
+    color: #FF9900;
+    padding: 5px;
+    margin: 0px;
+}
+
+.navBarMenu {
+    padding-left: 10px;
+}
+
+.navBarMenu ul li a {
+    /*
+    border-style: solid;
+    border-width: 1px;
+    */
+
+    font-family: 'Century Gothic';
+    font-size: 1.2em;
+    color: #FF9900;
+    width: 70px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.35em;
+    display: block;
+    white-space: nowrap;
+}
+
+    .navBarMenu ul li a:hover {
+        color: #465C71;
+        text-decoration: none;
+    }
