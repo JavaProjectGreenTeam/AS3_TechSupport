@@ -11,6 +11,10 @@ h1 {
     font-weight: bold;
 }
 
+p {
+    margin: 0;
+}
+
 /*Div Class Styles*/
 .header {
     background-color: #333333;
@@ -37,6 +41,10 @@ h1 {
     margin-left: auto;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding: 10px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .footer {
@@ -59,7 +67,7 @@ h1 {
     font-family: 'Century Gothic';
     color: #FF9900;
     padding: 5px;
-    margin: 0px;
+    /*margin: 0px;*/
 }
 
 .navBarMenu {
@@ -85,6 +93,6 @@ h1 {
 }
 
     .navBarMenu ul li a:hover {
-        color: #465C71;
-        text-decoration: none;
-    }
+    color: #FFFFFF;
+    text-decoration: none;
+}
