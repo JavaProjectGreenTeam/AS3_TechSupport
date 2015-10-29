@@ -5,4 +5,9 @@
     <p>
         Welcome to our place holder text site of placeholderness
     </p>
+<p>
+        <asp:Login ID="Login1" runat="server" CssClass="login">
+            <LoginButtonStyle CssClass="loginButton" />
+        </asp:Login>
+    </p>
 </asp:Content>

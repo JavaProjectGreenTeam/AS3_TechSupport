@@ -55,6 +55,14 @@ p {
 }
 
 /*Element Class Styles*/
+.login {
+    font-family: 'Century Gothic';
+}
+
+.loginButton {
+    background-color: #FFFFFF;
+}
+
 .headerTitle {
     margin: 0px;
     padding-left: 20px;
