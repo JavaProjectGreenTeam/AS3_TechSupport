@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddIncident.aspx" />
+    <Content Include="AddRegistration.aspx" />
     <Content Include="CustomerIncidents.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="IncidentAdded.aspx" />
@@ -75,6 +76,13 @@
     </Compile>
     <Compile Include="AddIncident.aspx.designer.cs">
       <DependentUpon>AddIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRegistration.aspx.cs">
+      <DependentUpon>AddRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRegistration.aspx.designer.cs">
+      <DependentUpon>AddRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerIncidents.aspx.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
