@@ -35,16 +35,17 @@ p {
 }
 
 .content {
+    width: 100%;
+    padding: 10px;
+}
+
+.contentContainer {
     width: 800px;
     background-color: #C0C0C0;
     margin-right: auto;
     margin-left: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 10px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .footer {
