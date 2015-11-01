@@ -13,7 +13,7 @@
     <asp:TextBox ID="txtCustomerID2" runat="server" CssClass="Login" Font-Size="Small" ReadOnly="True"></asp:TextBox>
     <br />
     <asp:Label ID="lblName" runat="server" CssClass="Login" Font-Size="Small" Text="Name:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
     <asp:TextBox ID="txtName" runat="server" CssClass="Login" Font-Size="Small" ReadOnly="True"></asp:TextBox>
     <br />
     <br />
@@ -29,13 +29,13 @@
     <asp:SqlDataSource ID="TechSupportAddIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportConnectionString %>" SelectCommand="SELECT [Name] FROM [Products]"></asp:SqlDataSource>
     <br />
     <asp:Label ID="lblTitle" runat="server" CssClass="Login" Font-Size="Small" Text="Title:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="txtTitle" runat="server" CssClass="Login" Font-Size="Small" ReadOnly="True"></asp:TextBox>
     <br />
     <br />
     <asp:Label ID="lblDescription" runat="server" CssClass="Login" Font-Size="Small" Text="Description:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="txtDescription" runat="server" CssClass="Login" Font-Size="Small" Height="16px" Width="163px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="txtDescription" runat="server" CssClass="Login" Font-Size="Small" Height="96px" Width="244px"></asp:TextBox>
     <br />
     <br />
     <br />
