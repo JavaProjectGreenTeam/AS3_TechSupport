@@ -5,7 +5,7 @@
             width: 96px;
         }
         .auto-style2 {
-            width: 267px;
+            width: 230px;
         }
     </style>
 </asp:Content>
@@ -80,7 +80,7 @@
     <asp:Label ID="lblDescription" runat="server" CssClass="label" Font-Size="Small" Text="Description:"></asp:Label>
             </td>
             <td class="auto-style2">
-    <asp:TextBox ID="txtDescription" runat="server" CssClass="textbox" Font-Size="Small" Rows="4" TextMode="MultiLine"></asp:TextBox>
+    <asp:TextBox ID="txtDescription" runat="server" CssClass="multilineTextbox textbox" Font-Size="Small" Rows="4" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>

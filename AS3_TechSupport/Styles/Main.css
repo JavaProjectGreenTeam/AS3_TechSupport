@@ -78,11 +78,17 @@ font-size: 1.2em;
 .textbox {
     font-family: 'Century Gothic';
     width: 220px;
+    margin: 2px;
+    }
+
+.multilineTextbox {
+    resize: none;
 }
 
 .dropdown {
     font-family: 'Century Gothic';
-    width: 220px;
+    width: 226px;
+    margin: 2px;
 }
 
 .login {
