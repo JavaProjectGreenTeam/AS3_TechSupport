@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\Main.Master" />
+    <Content Include="Admin\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
