@@ -13,6 +13,15 @@ namespace AS3_TechSupport {
     public partial class AddIncident {
         
         /// <summary>
+        /// TechSupportAddIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource TechSupportAddIncident;
+        
+        /// <summary>
         /// lblCustomerID control.
         /// </summary>
         /// <remarks>
@@ -110,15 +119,6 @@ namespace AS3_TechSupport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// TechSupportAddIncident control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource TechSupportAddIncident;
         
         /// <summary>
         /// lblTitle control.

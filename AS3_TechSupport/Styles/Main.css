@@ -17,7 +17,7 @@ p {
 
 .Login {
     font-family: 'Century Gothic';
-    font-size: 0.1em;
+    font-size: 0.8em;
 }
 
 .CustomerIDFont {
@@ -66,6 +66,25 @@ font-size: 1.2em;
 }
 
 /*Element Class Styles*/
+.label {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.button {
+    font-family: 'Century Gothic';
+}
+
+.textbox {
+    font-family: 'Century Gothic';
+    width: 220px;
+}
+
+.dropdown {
+    font-family: 'Century Gothic';
+    width: 220px;
+}
+
 .login {
     font-family: 'Century Gothic';
 }

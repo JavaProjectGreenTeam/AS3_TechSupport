@@ -5,14 +5,14 @@
     <p>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblIncidentCustomer" runat="server" CssClass="Login" Font-Size="Small" Text="Customer:"></asp:Label>
+        <asp:Label ID="lblIncidentCustomer" runat="server" CssClass="label" Font-Size="Small" Text="Customer:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
     </p>
     <p>
         &nbsp;</p>
     <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblIncidentProduct" runat="server" CssClass="Login" Font-Size="Small" Text="Product:"></asp:Label>
+        <asp:Label ID="lblIncidentProduct" runat="server" CssClass="label" Font-Size="Small" Text="Product:"></asp:Label>
     </p>
     <p>
         &nbsp;</p>
