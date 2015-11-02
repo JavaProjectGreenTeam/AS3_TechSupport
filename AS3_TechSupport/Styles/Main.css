@@ -115,20 +115,21 @@ font-size: 1.2em;
 }
 
 .navBarMenu {
-    padding-left: 10px;
+    /*padding-left: 10px;*/
 }
 
 .navBarMenu ul li a {
     font-family: 'Century Gothic';
     font-size: 1.2em;
     color: #FF9900;
-    width: 70px;
+    /*width: 70px;*/
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     line-height: 1.35em;
     display: block;
     white-space: nowrap;
+    margin-left: 8px;
 }
 
     .navBarMenu ul li a:hover {

@@ -67,10 +67,14 @@
       <DependentUpon>ASPNETDB.MDF</DependentUpon>
     </Content>
     <Content Include="App_Data\TechSupport.mdf" />
+    <Content Include="App_Data\TechSupport_log.ldf">
+      <DependentUpon>TechSupport.mdf</DependentUpon>
+    </Content>
     <Content Include="COntentPage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Styles\Main.css" />
+    <Content Include="Support\Customers.aspx" />
     <Content Include="Tech\CustomerIncidents.aspx" />
     <Content Include="Tech\IncidentAdded.aspx" />
     <Content Include="Web.config" />
@@ -92,18 +96,21 @@
     </Compile>
     <Compile Include="Admin\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Technician.aspx.cs">
       <DependentUpon>Technician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Technician.aspx.designer.cs">
       <DependentUpon>Technician.aspx</DependentUpon>
     </Compile>
     <Compile Include="COntentPage.aspx.cs">
       <DependentUpon>COntentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="COntentPage.aspx.designer.cs">
       <DependentUpon>COntentPage.aspx</DependentUpon>
@@ -130,14 +137,23 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tech\CustomerIncidents.aspx.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tech\CustomerIncidents.aspx.designer.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tech\IncidentAdded.aspx.cs">
       <DependentUpon>IncidentAdded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tech\IncidentAdded.aspx.designer.cs">
       <DependentUpon>IncidentAdded.aspx</DependentUpon>
