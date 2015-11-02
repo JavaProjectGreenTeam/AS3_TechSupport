@@ -13,5 +13,10 @@ namespace AS3_TechSupport
         {
 
         }
+
+        protected void btnPrevious_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

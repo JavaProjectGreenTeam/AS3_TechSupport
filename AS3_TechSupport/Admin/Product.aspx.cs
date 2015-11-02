@@ -13,5 +13,10 @@ namespace AS3_TechSupport
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
