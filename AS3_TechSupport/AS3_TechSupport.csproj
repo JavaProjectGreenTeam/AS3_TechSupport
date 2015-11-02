@@ -63,12 +63,8 @@
     <Content Include="App_Data\aspnetdb_log.ldf">
       <DependentUpon>ASPNETDB.MDF</DependentUpon>
     </Content>
-    <Content Include="Tech\CustomerIncidents.aspx" />
-    <Content Include="App_Data\create_TechSupport.sql" />
     <Content Include="App_Data\TechSupport.mdf" />
-    <Content Include="App_Data\TechSupport_log.ldf">
-      <DependentUpon>TechSupport.mdf</DependentUpon>
-    </Content>
+    <Content Include="Tech\CustomerIncidents.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Tech\IncidentAdded.aspx" />
     <Content Include="Login.aspx" />
