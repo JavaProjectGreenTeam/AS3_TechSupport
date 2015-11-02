@@ -19,7 +19,7 @@
                 <asp:Label ID="lblCustomer" runat="server" CssClass="Login" Font-Size="Small" Text="Customer:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="AddRegistrationCustomer" DataTextField="Name" DataValueField="Name">
+                <asp:DropDownList ID="ddlCustomer" runat="server" DataSourceID="AddRegistrationCustomer" DataTextField="Name" DataValueField="Name">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="AddRegistrationCustomer" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportConnectionString %>" SelectCommand="SELECT [Name] FROM [Customers]"></asp:SqlDataSource>
             </td>
@@ -30,7 +30,7 @@
                 <asp:Label ID="lblProduct" runat="server" CssClass="Login" Font-Size="Small" Text="Product:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="AddRegistrationProduct" DataTextField="Name" DataValueField="Name">
+                <asp:DropDownList ID="ddlProduct" runat="server" DataSourceID="AddRegistrationProduct" DataTextField="Name" DataValueField="Name">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="AddRegistrationProduct" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportConnectionString %>" SelectCommand="SELECT [Name] FROM [Products]"></asp:SqlDataSource>
             </td>
