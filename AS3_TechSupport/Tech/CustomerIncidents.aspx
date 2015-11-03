@@ -67,8 +67,8 @@
                 </td>
                 <td class="auto-style5">
         <asp:TextBox ID="txtCity" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
-        <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="41px"></asp:TextBox>
-        <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="139px"></asp:TextBox>
+        <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="40px"></asp:TextBox>
+        <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="140px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
