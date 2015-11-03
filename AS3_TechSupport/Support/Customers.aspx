@@ -74,6 +74,13 @@
             </td>
             <td>&nbsp;</td>
         </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
     </table>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Width="780px">
         <AlternatingRowStyle BackColor="White" />
