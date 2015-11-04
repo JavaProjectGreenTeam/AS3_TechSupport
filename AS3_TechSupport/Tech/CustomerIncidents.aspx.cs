@@ -28,8 +28,8 @@ namespace AS3_TechSupport
         }
 
         protected void btnTest_Click(object sender, EventArgs e) {
-            int numRows = GridView1.Rows.Count;
-            txtTest.Text = numRows.ToString();
+            int numRows = GridView1.Rows.Count; //Gets entries in 
+            //txtTest.Text = numRows.ToString();
         }
 
         protected void RunQuerys(string customerID) {
