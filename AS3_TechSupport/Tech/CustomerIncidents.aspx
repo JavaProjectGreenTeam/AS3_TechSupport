@@ -117,5 +117,4 @@
                 <asp:Parameter Name="CustomerID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-    </p>
 </asp:Content>
