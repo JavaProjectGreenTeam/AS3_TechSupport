@@ -73,6 +73,7 @@ font-size: 1.2em;
 
 .button {
     font-family: 'Century Gothic';
+    margin-top: 0px;
 }
 
 .textbox {
@@ -111,7 +112,6 @@ font-size: 1.2em;
     font-family: 'Century Gothic';
     color: #FF9900;
     padding: 5px;
-    /*margin: 0px;*/
 }
 
 .navBarMenu {

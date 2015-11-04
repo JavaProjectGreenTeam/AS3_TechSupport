@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
+        <asp:LoginName ID="LoginName1" runat="server" />
         Welcome to our place holder text site of placeholderness
     </p>
 <p>
