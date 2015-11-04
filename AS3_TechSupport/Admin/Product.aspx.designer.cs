@@ -13,6 +13,42 @@ namespace AS3_TechSupport {
     public partial class Product {
         
         /// <summary>
+        /// btnProductFirst control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProductFirst;
+        
+        /// <summary>
+        /// btnProductPrevious control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProductPrevious;
+        
+        /// <summary>
+        /// btnProductNext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProductNext;
+        
+        /// <summary>
+        /// btnProductLast control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProductLast;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>

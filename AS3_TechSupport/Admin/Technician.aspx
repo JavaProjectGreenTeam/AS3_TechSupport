@@ -10,6 +10,17 @@
         <table style="width:100%;">
             <tr>
                 <td class="auto-style1" style="text-align: right">
+                    &nbsp;</td>
+                <td>
+                    <asp:Button ID="btnTechFirst" runat="server" CssClass="button" Text="&lt;&lt;" />
+                    <asp:Button ID="btnPrevious" runat="server" CssClass="button" OnClick="btnPrevious_Click" Text="&lt;" />
+                    <asp:Button ID="btnNext" runat="server" CssClass="button" Text="&gt;" />
+                    <asp:Button ID="btnTechLast" runat="server" CssClass="button" Text="&gt;&gt;" />
+                    <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" style="text-align: right">
         <asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
                 </td>
                 <td>
@@ -39,6 +50,12 @@
                 <td>
         <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
                 </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" style="text-align: right">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
             </tr>
         </table>
     </asp:Content>
