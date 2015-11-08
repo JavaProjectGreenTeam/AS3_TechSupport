@@ -6,6 +6,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/*****************************
+ * Author: Ryan Gallagher
+ * **************************/
+
 namespace AS3_TechSupport.Support {
     public partial class Customers : System.Web.UI.Page {
 
@@ -17,6 +21,7 @@ namespace AS3_TechSupport.Support {
         }
         
         protected void btnSearch_Click(object sender, EventArgs e) {
+            //calls the query method to search the customers table for the given ID
             if (txtSearch.Text != "") {
                 string customerID = txtSearch.Text;
                 Query(customerID);
@@ -24,6 +29,7 @@ namespace AS3_TechSupport.Support {
         }
 
         protected void tblCustomers_SelectedIndexChanged(object sender, EventArgs e) {
+            //fills the textboxes when a user selects a customer from the table
             GridViewRow selectedRow = tblCustomers.SelectedRow;
             string customerID = selectedRow.Cells[1].Text;
             Query(customerID);
@@ -31,7 +37,7 @@ namespace AS3_TechSupport.Support {
         }
 
         protected DataView customerInfo;
-
+        //Nicks Code
         protected void Query(string customerID) {
             sqlSearchQuery.SelectParameters.Clear();
 
@@ -41,6 +47,7 @@ namespace AS3_TechSupport.Support {
 
             foreach (DataRowView infoRow in customerInfo) {
 
+                //puts all the colums of the selected customer into strings
                 txtCustomerID.Text = infoRow["CustomerID"].ToString();
                 txtName.Text = infoRow["Name"].ToString();
                 txtAddress.Text = infoRow["Address"].ToString();
