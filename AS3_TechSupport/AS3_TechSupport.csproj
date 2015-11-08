@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="AddIncident.aspx" />
     <Content Include="AddRegistration.aspx" />
+    <Content Include="Admin\AddTechnician.aspx" />
     <Content Include="Admin\Product.aspx" />
     <Content Include="Admin\Technician.aspx" />
     <Content Include="App_Data\ASPNETDB.MDF" />
@@ -93,6 +94,13 @@
     </Compile>
     <Compile Include="AddRegistration.aspx.designer.cs">
       <DependentUpon>AddRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddTechnician.aspx.cs">
+      <DependentUpon>AddTechnician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddTechnician.aspx.designer.cs">
+      <DependentUpon>AddTechnician.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
