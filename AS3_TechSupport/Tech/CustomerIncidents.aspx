@@ -86,7 +86,7 @@
                 </td>
             </tr>
         </table>
-&nbsp;<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ProductCode" HeaderText="ProductCode" SortExpression="ProductCode" />
