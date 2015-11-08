@@ -19,7 +19,7 @@
                 <asp:Label ID="lblCustomer" runat="server" CssClass="Login" Font-Size="Small" Text="Customer:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:DropDownList ID="ddlCustomer" runat="server" DataSourceID="AddRegistrationCustomer" DataTextField="Name" DataValueField="Name">
+                <asp:DropDownList ID="ddlCustomer" runat="server" DataSourceID="AddRegistrationCustomer" DataTextField="Name" DataValueField="Name" CssClass="dropdown">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="AddRegistrationCustomer" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Customers]"></asp:SqlDataSource>
             </td>
@@ -30,7 +30,7 @@
                 <asp:Label ID="lblProduct" runat="server" CssClass="Login" Font-Size="Small" Text="Product:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:DropDownList ID="ddlProduct" runat="server" DataSourceID="AddRegistrationProduct" DataTextField="Name" DataValueField="Name">
+                <asp:DropDownList ID="ddlProduct" runat="server" DataSourceID="AddRegistrationProduct" DataTextField="Name" DataValueField="Name" CssClass="dropdown">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="AddRegistrationProduct" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Products]"></asp:SqlDataSource>
             </td>
@@ -41,20 +41,21 @@
                 <asp:Label ID="lblRegDate" runat="server" CssClass="Login" Font-Size="Small" Text="Reg Date:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtRegDate" runat="server" CssClass="Login" Font-Size="Small"></asp:TextBox>
+                <asp:TextBox ID="txtRegDate" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
             </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Button ID="btnRegisterProduct" runat="server" CssClass="Login" Font-Size="Small" Text="Register Product" />
+                <asp:Button ID="btnRegisterProduct" runat="server" CssClass="Login" Font-Size="Small" Text="Register Product" OnClick="btnRegisterProduct_Click" />
             </td>
             <td class="auto-style2">
-                <asp:Button ID="btnCancel" runat="server" CssClass="Login" Font-Size="Small" Text="Cancel" />
-                <asp:Button ID="btnExit" runat="server" CssClass="Login" Font-Size="Small" Text="Exit" Width="94px" />
-            </td>
+                &nbsp;</td>
             <td class="auto-style3">
                 &nbsp;</td>
         </tr>
     </table>
+    <asp:SqlDataSource ID="sqlAddRegistration" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Registrations(CustomerID, ProductCode, RegistrationDate) VALUES (@CustomerID, @ProductCode, @RegDate)" SelectCommand="SELECT * FROM [Registrations]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlGetCustomerID" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT CustomerID FROM Customers WHERE (Name = @CustomerName)"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlGetProductCode" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT ProductCode FROM Products WHERE (Name = @ProductName)"></asp:SqlDataSource>
 </asp:Content>

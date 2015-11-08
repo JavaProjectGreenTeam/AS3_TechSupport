@@ -94,21 +94,30 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.Button btnRegisterProduct;
         
         /// <summary>
-        /// btnCancel control.
+        /// sqlAddRegistration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlAddRegistration;
         
         /// <summary>
-        /// btnExit control.
+        /// sqlGetCustomerID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExit;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetCustomerID;
+        
+        /// <summary>
+        /// sqlGetProductCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetProductCode;
     }
 }
