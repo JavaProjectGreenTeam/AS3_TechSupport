@@ -29,8 +29,6 @@
                 </td>
                 <td class="auto-style3"><asp:TextBox ID="txtCustomerID1" runat="server" Font-Size="Small" CssClass="textbox"></asp:TextBox>
         <asp:Button ID="btnGetCustomer" runat="server" CssClass="button" Font-Size="Small" Text="Get Customer" OnClick="btnGetCustomer_Click" />
-                    <asp:Button ID="btnTest" runat="server" OnClick="btnTest_Click" Text="Button" />
-                    <asp:TextBox ID="txtTest" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -88,7 +86,7 @@
                 </td>
             </tr>
         </table>
-&nbsp;<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ProductCode" HeaderText="ProductCode" SortExpression="ProductCode" />
