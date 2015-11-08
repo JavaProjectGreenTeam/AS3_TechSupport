@@ -9,9 +9,11 @@
             </td>
             <td>
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:Button ID="btnSearch" runat="server" CssClass="button" Text="Search" />
+                <asp:Button ID="btnSearch" runat="server" CssClass="button" Text="Search" OnClick="btnSearch_Click" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="btnAddCustomer" runat="server" CssClass="button" Text="Add Customer" />
+            </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -52,7 +54,7 @@
             <td>
                 <asp:TextBox ID="txtCity" runat="server" CssClass="textbox"></asp:TextBox>
                 <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Width="40px"></asp:TextBox>
-                <asp:TextBox ID="txtZipCode" runat="server" CssClass="textbox" Width="140px"></asp:TextBox>
+                <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Width="140px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -82,7 +84,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Width="780px">
+    <asp:GridView ID="tblCustomers" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="sqlTable" ForeColor="Black" GridLines="Vertical" Width="780px" OnSelectedIndexChanged="tblCustomers_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
@@ -101,5 +103,10 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [CustomerID], [Name], [City], [Email] FROM [Customers]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlTable" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [CustomerID], [Name], [City], [Email] FROM [Customers]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlSearchQuery" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
+        <SelectParameters>
+            <asp:Parameter Name="CustomerID" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 </asp:Content>

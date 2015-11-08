@@ -40,6 +40,15 @@ namespace AS3_TechSupport.Support {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
+        /// btnAddCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddCustomer;
+        
+        /// <summary>
         /// lblCustomerID2 control.
         /// </summary>
         /// <remarks>
@@ -121,13 +130,13 @@ namespace AS3_TechSupport.Support {
         protected global::System.Web.UI.WebControls.TextBox txtState;
         
         /// <summary>
-        /// txtZipCode control.
+        /// txtZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZipCode;
+        protected global::System.Web.UI.WebControls.TextBox txtZip;
         
         /// <summary>
         /// lblPhone control.
@@ -166,21 +175,30 @@ namespace AS3_TechSupport.Support {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// GridView1 control.
+        /// tblCustomers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView tblCustomers;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// sqlTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlTable;
+        
+        /// <summary>
+        /// sqlSearchQuery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlSearchQuery;
     }
 }
