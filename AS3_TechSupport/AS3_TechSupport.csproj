@@ -136,6 +136,7 @@
     <Compile Include="MasterPages\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
+    <Compile Include="MessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\Customers.aspx.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
