@@ -14,12 +14,12 @@ namespace AS3_TechSupport.Support {
     public partial class Customers : System.Web.UI.Page {
 
         //int selectedIndex;
-        
+
         protected void Page_Load(object sender, EventArgs e) {
             //selectedIndex = tblCustomers.SelectedIndex;
             //txtCustomerID.Text = selectedIndex.ToString();
         }
-        
+
         protected void btnSearch_Click(object sender, EventArgs e) {
             //calls the query method to search the customers table for the given ID
             if (txtSearch.Text != "") {
@@ -57,6 +57,21 @@ namespace AS3_TechSupport.Support {
                 txtPhone.Text = infoRow["Phone"].ToString();
                 txtEmail.Text = infoRow["Email"].ToString();
             }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e) {
+            string customerID = txtCustomerID.Text;
+            Delete(customerID);
+        }
+
+        protected void Delete(string customerID) {
+            sqlDelete.SelectParameters.Clear();
+            sqlDelete.SelectParameters.Add("CustomerID", customerID);
+            //string deleteQuery = "DELETE FROM Customers WHERE (CustomerID = @customerID)";
+        }
+
+        protected void btnAddCustomer_Click(object sender, EventArgs e) {
+            Response.Redirect("AddCustomer.aspx");
         }
     }
 }

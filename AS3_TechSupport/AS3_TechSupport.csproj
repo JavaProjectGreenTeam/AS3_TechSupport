@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Support\AddCustomer.aspx" />
     <Content Include="AddIncident.aspx" />
     <Content Include="AddRegistration.aspx" />
     <Content Include="Admin\Product.aspx" />
@@ -80,6 +81,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Support\AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddIncident.aspx.cs">
       <DependentUpon>AddIncident.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

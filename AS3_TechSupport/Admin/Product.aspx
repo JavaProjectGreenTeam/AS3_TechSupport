@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 217px;
+            width: 220px;
         }
         .auto-style2 {
             width: 63px;
@@ -11,7 +11,7 @@
             width: 262px;
         }
         .auto-style4 {
-            width: 217px;
+            width: 220px;
             height: 25px;
         }
         .auto-style5 {
@@ -30,10 +30,11 @@
             <td class="auto-style4">
                 <asp:Button ID="btnProductFirst" runat="server" CssClass="button" Text="&lt;&lt;" />
                 <asp:Button ID="btnProductPrevious" runat="server" CssClass="button" Text="&lt;" />
+                <asp:TextBox ID="txtProduct" runat="server" CssClass="textbox" Width="100px"></asp:TextBox>
                 <asp:Button ID="btnProductNext" runat="server" CssClass="button" Text="&gt;" />
                 <asp:Button ID="btnProductLast" runat="server" CssClass="button" Text="&gt;&gt;" />
             </td>
-            <td class="auto-style5"></td>
+            <td class="auto-style5">&nbsp;</td>
             <td class="auto-style6"></td>
         </tr>
         <tr>
@@ -47,7 +48,7 @@
             <td class="auto-style3">&nbsp;</td>
         </tr>
     </table>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ProductCode" DataSourceID="TechSupportProducts" ForeColor="Black" GridLines="Vertical" Height="177px" Width="780px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ProductCode" DataSourceID="TechSupportProducts" ForeColor="Black" GridLines="Vertical" Height="177px" Width="780px" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="ProductCode" HeaderText="ProductCode" ReadOnly="True" SortExpression="ProductCode" />

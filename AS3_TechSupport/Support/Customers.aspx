@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="AS3_TechSupport.Support.Customers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 31px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
@@ -12,7 +17,7 @@
                 <asp:Button ID="btnSearch" runat="server" CssClass="button" Text="Search" OnClick="btnSearch_Click" />
             </td>
             <td>
-                <asp:Button ID="btnAddCustomer" runat="server" CssClass="button" Text="Add Customer" />
+                <asp:Button ID="btnAddCustomer" runat="server" CssClass="button" Text="Add Customer" OnClick="btnAddCustomer_Click" />
             </td>
         </tr>
         <tr>
@@ -30,13 +35,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td class="auto-style1">
                 <asp:Label ID="lblName" runat="server" CssClass="label" Text="Name:"></asp:Label>
             </td>
-            <td>
+            <td class="auto-style1">
                 <asp:TextBox ID="txtName" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td class="auto-style1"></td>
         </tr>
         <tr>
             <td>
@@ -49,7 +54,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip"></asp:Label>
+                <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip:"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtCity" runat="server" CssClass="textbox"></asp:TextBox>
@@ -74,7 +79,9 @@
             <td>
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="btnDelete" runat="server" CssClass="button" OnClick="btnDelete_Click" Text="Delete Customer" />
+            </td>
         </tr>
         <tr>
             <td>
@@ -109,4 +116,5 @@
             <asp:Parameter Name="CustomerID" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlDelete" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" DeleteCommand="DELETE FROM Customers WHERE (CustomerID = @customerID)" SelectCommand="SELECT * FROM [Customers]"></asp:SqlDataSource>
 </asp:Content>
