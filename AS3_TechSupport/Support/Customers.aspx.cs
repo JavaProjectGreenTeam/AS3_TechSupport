@@ -65,8 +65,8 @@ namespace AS3_TechSupport.Support {
         }
 
         protected void Delete(string customerID) {
-            sqlDelete.SelectParameters.Clear();
-            sqlDelete.SelectParameters.Add("CustomerID", customerID);
+            sqlDelete.DeleteParameters.Clear();
+            sqlDelete.DeleteParameters.Add("CustomerID", customerID);
             //string deleteQuery = "DELETE FROM Customers WHERE (CustomerID = @customerID)";
         }
 
