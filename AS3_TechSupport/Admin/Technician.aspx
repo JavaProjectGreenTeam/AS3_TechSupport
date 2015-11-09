@@ -12,20 +12,21 @@
                 <td class="auto-style1" style="text-align: right">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="btnTechFirst" runat="server" CssClass="button" Text="&lt;&lt;" />
+                    <asp:Button ID="btnTechFirst" runat="server" CssClass="button" Text="&lt;&lt;" OnClick="btnTechFirst_Click" />
                     <asp:Button ID="btnPrevious" runat="server" CssClass="button" OnClick="btnPrevious_Click" Text="&lt;" />
-                    <asp:Button ID="btnNext" runat="server" CssClass="button" Text="&gt;" />
-                    <asp:Button ID="btnTechLast" runat="server" CssClass="button" Text="&gt;&gt;" />
-                    <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" />
+                    <asp:Button ID="btnNext" runat="server" CssClass="button" Text="&gt;" OnClick="btnNext_Click" />
+                    <asp:Button ID="btnTechLast" runat="server" CssClass="button" Text="&gt;&gt;" OnClick="btnTechLast_Click" />
+                    <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" OnClick="btnTechnician_Click" />
+                &nbsp;<asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
+                &nbsp;<asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
+                &nbsp;<asp:Button ID="btnSearch" runat="server" CssClass="button" OnClick="btnSearch_Click" Text="Search" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1" style="text-align: right">
-        <asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
-                </td>
+                    &nbsp;</td>
                 <td>
-        <asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1" style="text-align: right">
@@ -55,7 +56,9 @@
                 <td class="auto-style1" style="text-align: right">
                     &nbsp;</td>
                 <td>
-                    &nbsp;</td>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] ORDER BY [TechID]"></asp:SqlDataSource>
+                </td>
             </tr>
         </table>
     </asp:Content>
