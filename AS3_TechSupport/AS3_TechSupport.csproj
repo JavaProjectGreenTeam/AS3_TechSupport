@@ -58,6 +58,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TechSupport.mdf" />
+    <Content Include="App_Data\TechSupport_log.ldf">
+      <DependentUpon>TechSupport.mdf</DependentUpon>
+    </Content>
     <Content Include="Support\AddCustomer.aspx" />
     <Content Include="AddIncident.aspx" />
     <Content Include="AddRegistration.aspx" />
@@ -67,10 +71,6 @@
     <Content Include="App_Data\ASPNETDB.MDF" />
     <Content Include="App_Data\aspnetdb_log.ldf">
       <DependentUpon>ASPNETDB.MDF</DependentUpon>
-    </Content>
-    <Content Include="App_Data\TechSupport.mdf" />
-    <Content Include="App_Data\TechSupport_log.ldf">
-      <DependentUpon>TechSupport.mdf</DependentUpon>
     </Content>
     <Content Include="COntentPage.aspx" />
     <Content Include="Default.aspx" />
