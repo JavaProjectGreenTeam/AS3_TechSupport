@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace AS3_TechSupport {
     public partial class CustomerIncidents : System.Web.UI.Page {
-        protected DataView customerInfoOut;
+        //protected DataView customerInfoOut;
 
         protected void Page_Load(object sender, EventArgs e) {
         }
@@ -37,7 +37,7 @@ namespace AS3_TechSupport {
              
 
             //Run select statements
-            customerInfoOut = (DataView)sqlCustomerInfo.Select(new DataSourceSelectArguments());
+            DataView customerInfoOut = (DataView)sqlCustomerInfo.Select(new DataSourceSelectArguments());
             sqlIncidents.Select(new DataSourceSelectArguments());
 
             foreach (DataRowView infoRow in customerInfoOut) {
