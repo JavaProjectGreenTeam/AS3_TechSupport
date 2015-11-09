@@ -30,6 +30,14 @@
             </tr>
             <tr>
                 <td class="auto-style1" style="text-align: right">
+                    <asp:Label ID="lblTechID0" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtTechID1" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" style="text-align: right">
         <asp:Label ID="lblName" runat="server" CssClass="label" Font-Size="Small" Text="Name:"></asp:Label>
                 </td>
                 <td>
@@ -56,8 +64,11 @@
                 <td class="auto-style1" style="text-align: right">
                     &nbsp;</td>
                 <td>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] ORDER BY [TechID]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlGetTech" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] WHERE ([TechID] = @TechID)">
+                        <SelectParameters>
+                            <asp:Parameter Name="TechID" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </td>
             </tr>
         </table>
