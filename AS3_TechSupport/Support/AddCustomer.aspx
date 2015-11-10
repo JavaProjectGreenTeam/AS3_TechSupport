@@ -27,7 +27,8 @@
             </td>
             <td>
                 <asp:TextBox ID="txtCity" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Width="40px"></asp:TextBox>
+                <asp:DropDownList ID="ddlState" runat="server" CssClass="dropdown" DataSourceID="sqlStates" DataTextField="StateCode" DataValueField="StateCode" Width="50px">
+                </asp:DropDownList>
                 <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Width="140px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -52,11 +53,12 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="btnAdd" runat="server" CssClass="button" OnClick="btnAdd_Click" Text="Add" />
+                <asp:SqlDataSource ID="sqlInsertQuery" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Customers(Name, Address, City, State, ZipCode, Phone, Email) VALUES (@name, @address, @city, @state, @zipcode, @phone, @email)" SelectCommand="SELECT * FROM [Customers]"></asp:SqlDataSource>
             </td>
             <td>
+                <asp:Button ID="btnAdd" runat="server" CssClass="button" OnClick="btnAdd_Click" Text="Add" />
                 <asp:Button ID="btnCancel" runat="server" CssClass="button" Text="Cancel" OnClick="btnCancel_Click" />
-                <asp:SqlDataSource ID="sqlInsertQuery" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Customers(Name, Address, City, State, ZipCode, Phone, Email) VALUES (@name, @address, @city, @state, @zipcode, @phone, @email)" SelectCommand="SELECT * FROM [Customers]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlStates" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [StateCode] FROM [States]"></asp:SqlDataSource>
             </td>
             <td>&nbsp;</td>
         </tr>

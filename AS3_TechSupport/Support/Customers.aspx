@@ -9,8 +9,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td>
-                <asp:Label ID="lblCustomerID1" runat="server" CssClass="label" Text="Customer ID:"></asp:Label>
+            <td style="text-align: right">
+                <asp:Label ID="lblCustomerID1" runat="server" CssClass="label" Text="Customer ID:" Font-Size="Small"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="textbox"></asp:TextBox>
@@ -26,8 +26,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
-                <asp:Label ID="lblCustomerID2" runat="server" CssClass="label" Text="Customer ID:"></asp:Label>
+            <td style="text-align: right">
+                <asp:Label ID="lblCustomerID2" runat="server" CssClass="label" Text="Customer ID:" Font-Size="Small"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtCustomerID" runat="server" CssClass="textbox"></asp:TextBox>
@@ -35,8 +35,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">
-                <asp:Label ID="lblName" runat="server" CssClass="label" Text="Name:"></asp:Label>
+            <td class="auto-style1" style="text-align: right">
+                <asp:Label ID="lblName" runat="server" CssClass="label" Text="Name:" Font-Size="Small"></asp:Label>
             </td>
             <td class="auto-style1">
                 <asp:TextBox ID="txtName" runat="server" CssClass="textbox"></asp:TextBox>
@@ -44,8 +44,8 @@
             <td class="auto-style1"></td>
         </tr>
         <tr>
-            <td>
-                <asp:Label ID="lblAddress" runat="server" CssClass="label" Text="Address:"></asp:Label>
+            <td style="text-align: right">
+                <asp:Label ID="lblAddress" runat="server" CssClass="label" Text="Address:" Font-Size="Small"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtAddress" runat="server" CssClass="textbox"></asp:TextBox>
@@ -53,8 +53,8 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
-                <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip:"></asp:Label>
+            <td style="text-align: right">
+                <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip:" Font-Size="Small"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtCity" runat="server" CssClass="textbox"></asp:TextBox>
@@ -64,24 +64,23 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
-                <asp:Label ID="lblPhone" runat="server" CssClass="label" Text="Phone:"></asp:Label>
+            <td class="auto-style1" style="text-align: right">
+                <asp:Label ID="lblPhone" runat="server" CssClass="label" Text="Phone:" Font-Size="Small"></asp:Label>
             </td>
-            <td>
+            <td class="auto-style1">
                 <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td class="auto-style1"></td>
         </tr>
         <tr>
-            <td>
-                <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email:"></asp:Label>
+            <td style="text-align: right">
+                <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email:" Font-Size="Small"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btnDelete" runat="server" CssClass="button" OnClick="btnDelete_Click" Text="Delete Customer" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
