@@ -13,5 +13,10 @@ namespace AS3_TechSupport
         {
 
         }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace AS3_TechSupport
 {
     public partial class Technician : System.Web.UI.Page
     {
-        //public int rowIndex = 1;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
@@ -31,12 +31,8 @@ namespace AS3_TechSupport
             }
         }
 
-
-
-
-
-
-
+               
+        
         protected void btnNext_Click(object sender, EventArgs e)
         {
 
@@ -57,9 +53,7 @@ namespace AS3_TechSupport
                 }
             }
         }
-
-
-
+        
         private DataTable GetData()
         {
             DataTable dt = new DataTable();
@@ -139,27 +133,22 @@ namespace AS3_TechSupport
 
 
 
-
-
-
-
-
         protected void btnTechLast_Click(object sender, EventArgs e)
         {
         }
     }
 }
 
-        
-            
 
 
 
 
-        
 
 
-    
+
+
+
+
 
 
 
