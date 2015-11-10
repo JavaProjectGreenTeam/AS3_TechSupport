@@ -7,7 +7,12 @@ using System.Web.UI;
 namespace AS3_TechSupport {
     public static class MessageBox {
         public static void Show(this Page page, string message) {
-            page.ClientScript.RegisterStartupScript(page.GetType(), "MessageBox", "<script language='javascript'>alert('" + message + "');</script>");
+            //Page.ClientScript.RegisterStartupScript(Page.GetType(), "MessageBox", "<script language='javascript'>alert('" + message + "');</script>");
+            page.ClientScript.RegisterStartupScript(
+                page.GetType(),
+                "MessageBox",
+                "<script language='javascript'>alert('" + message + "');</script>"
+            );
         }
     }
 }
