@@ -62,6 +62,15 @@ namespace AS3_TechSupport {
         //General Methods//
         //===============//
 
+        private void SetTextBoxes(DataView data) {
+            foreach (DataRowView infoRow in data) {
+                txtTechID1.Text = infoRow["TechID"].ToString();
+                txtName.Text = infoRow["Name"].ToString();
+                txtEmail.Text = infoRow["Email"].ToString();
+                txtPhone.Text = infoRow["Phone"].ToString();
+            }
+        }
+
         private DataTable GetData() {
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=D:\\C# ASP\\github\\AS3_TechSupport\\App_Data\\TechSupport.mdf;Integrated Security=True");
@@ -91,53 +100,40 @@ namespace AS3_TechSupport {
             //Execute sql query
             DataView techInfo = (DataView)sqlGetTech.Select(new DataSourceSelectArguments());
 
-
             //Populate text boxes from data
-            foreach (DataRowView infoRow in techInfo) {
-                txtTechID1.Text = infoRow["TechID"].ToString();
-                txtName.Text = infoRow["Name"].ToString();
-                txtEmail.Text = infoRow["Email"].ToString();
-                txtPhone.Text = infoRow["Phone"].ToString();
-            }
+            SetTextBoxes(techInfo);
         }
 
         private void First() {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT TOP 1 * FROM Technicians ORDER BY TechID", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            txtTechID1.Text = dt.Rows[0][0].ToString();
-            txtName.Text = dt.Rows[0][1].ToString();
-            txtEmail.Text = dt.Rows[0][2].ToString();
-            txtPhone.Text = dt.Rows[0][3].ToString();
-            con.Close();
+            //Execute sql query
+            DataView techInfo = (DataView)sqlFirst.Select(new DataSourceSelectArguments());
+
+            //Populate text boxes from data
+            SetTextBoxes(techInfo);
         }
 
         private void Last() {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT TOP 1 * FROM Technicians ORDER BY TechID DESC", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            txtTechID1.Text = dt.Rows[0][0].ToString();
-            txtName.Text = dt.Rows[0][1].ToString();
-            txtEmail.Text = dt.Rows[0][2].ToString();
-            txtPhone.Text = dt.Rows[0][3].ToString();
-            con.Close();
+            //Execute sql query
+            DataView techInfo = (DataView)sqlLast.Select(new DataSourceSelectArguments());
+
+            //Populate text boxes from data
+            SetTextBoxes(techInfo);
         }
 
         private void Next() {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
-            con.Open();
-            string sqlQuery = "SELECT * FROM Technicians WHERE TechID > '" + txtTechID1.Text + "' ORDER BY TechID LIMIT 1";
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Technicians WHERE TechID > '" + txtTechID1.Text + "' ORDER BY TechID LIMIT 1", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            txtName.Text = dt.Rows[0][1].ToString();
-            txtEmail.Text = dt.Rows[0][2].ToString();
-            txtPhone.Text = dt.Rows[0][3].ToString();
-            con.Close();
+            //Clear sql parameters
+            sqlNext.SelectParameters.Clear();
+
+            //Set sql parameters
+            sqlNext.SelectParameters.Add("TechID", txtTechID1.Text);
+
+            //Execute sql query
+            DataView techInfo = (DataView)sqlNext.Select(new DataSourceSelectArguments());
+
+            //Populate text boxes from data
+            SetTextBoxes(techInfo);
+
+            
         }
 
         private void Previous() {

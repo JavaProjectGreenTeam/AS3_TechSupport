@@ -54,7 +54,7 @@ namespace AS3_TechSupport {
                 txtEmail.Text = infoRow["Email"].ToString();
             }
 
-            MessageBox.Show(this, "Hello");
+            //MessageBox.Show("Hello");
             //ClientScript.RegisterStartupScript(this.GetType(), "Test Dialog", "alert('" + "Hello" + "');", true);
         }
 
