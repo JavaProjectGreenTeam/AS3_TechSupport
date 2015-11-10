@@ -69,6 +69,7 @@ font-size: 1.2em;
 .label {
     font-family: 'Century Gothic';
     font-weight: bold;
+    font-size: small;
 }
 
 .button {
