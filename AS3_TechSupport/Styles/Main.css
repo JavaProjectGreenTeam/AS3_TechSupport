@@ -100,6 +100,10 @@ font-size: 1.2em;
     background-color: #FFFFFF;
 }
 
+.loginLabel {
+    font-size: medium;
+}
+
 .headerTitle {
     margin: 0px;
     padding-left: 20px;
