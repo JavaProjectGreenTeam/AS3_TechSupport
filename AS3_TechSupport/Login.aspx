@@ -21,11 +21,12 @@
 
             </td>
             <td class="auto-style2">
-                <asp:RequiredFieldValidator ID="rfvUsername" runat="server" CssClass="label" ErrorMessage="RequiredFieldValidator">Requires a known Username</asp:RequiredFieldValidator>
                 <br />
-                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" CssClass="label" ErrorMessage="RequiredFieldValidator">Requires a known Password</asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Login ID="Login2" runat="server">
+                </asp:Login>
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
