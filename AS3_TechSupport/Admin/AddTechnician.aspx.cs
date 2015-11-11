@@ -51,7 +51,7 @@ namespace AS3_TechSupport
 
                 com.ExecuteNonQuery();
                 string display = "Registration is Complete";
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
         
                 Response.Redirect("Technician.aspx");
 

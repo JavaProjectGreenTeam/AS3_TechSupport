@@ -11,21 +11,8 @@ using System.Collections.Specialized;
 
 namespace AS3_TechSupport {
     public partial class Technician : System.Web.UI.Page {
-        //public int rowIndex = 1;
         protected void Page_Load(object sender, EventArgs e) {
-            //if (IsPostBack)
-            //{
-            //    DataTable dt = GetData();
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        txtName.Text = dt.Rows[0]["Name"].ToString();
-            //        txtEmail.Text = dt.Rows[1]["Email"].ToString();
-            //        txtPhone.Text = dt.Rows[2]["Phone"].ToString();
 
-            //        Session["dt"] = dt;
-            //    }
-
-            //}
         }
 
 
@@ -39,6 +26,7 @@ namespace AS3_TechSupport {
 
         protected void btnSearch_Click(object sender, EventArgs e) {
             SearchTech();
+            txtTechID.Text = "";
         }
 
         protected void btnTechFirst_Click(object sender, EventArgs e) {
@@ -63,31 +51,16 @@ namespace AS3_TechSupport {
         //===============//
 
         private void SetTextBoxes(DataView data) {
-            foreach (DataRowView infoRow in data) {
-                txtTechID1.Text = infoRow["TechID"].ToString();
-                txtName.Text = infoRow["Name"].ToString();
-                txtEmail.Text = infoRow["Email"].ToString();
-                txtPhone.Text = infoRow["Phone"].ToString();
+            if (data != null) {
+                foreach (DataRowView infoRow in data) {
+                    txtTechID1.Text = infoRow["TechID"].ToString();
+                    txtName.Text = infoRow["Name"].ToString();
+                    txtEmail.Text = infoRow["Email"].ToString();
+                    txtPhone.Text = infoRow["Phone"].ToString();
+                }
+            } else {
+                txtTechID1.Text = txtName.Text = txtEmail.Text = txtPhone.Text = "";
             }
-        }
-
-        private DataTable GetData() {
-            DataTable dt = new DataTable();
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=D:\\C# ASP\\github\\AS3_TechSupport\\App_Data\\TechSupport.mdf;Integrated Security=True");
-            try {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select * from Technicians", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-            } catch (System.Data.SqlClient.SqlException ex) {
-                string msg = "Fetch Error:";
-                msg += ex.Message;
-                throw new Exception(msg);
-            } finally {
-                con.Close();
-            }
-            return dt;
         }
 
         protected void SearchTech() {
@@ -137,21 +110,17 @@ namespace AS3_TechSupport {
         }
 
         private void Previous() {
+            //Clear sql parammeters
+            sqlPrevious.SelectParameters.Clear();
 
+            //Set sql parameters
+            sqlPrevious.SelectParameters.Add("TechID", txtTechID1.Text);
+
+            //Execute sql query
+            DataView techInfo = (DataView)sqlPrevious.Select(new DataSourceSelectArguments());
+
+            //Populate text boxes from data
+            SetTextBoxes(techInfo);
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

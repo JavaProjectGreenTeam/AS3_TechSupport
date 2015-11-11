@@ -90,7 +90,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <asp:GridView ID="tblCustomers" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="sqlTable" ForeColor="Black" GridLines="Vertical" Width="780px" OnSelectedIndexChanged="tblCustomers_SelectedIndexChanged">
+    <asp:GridView ID="tblCustomers" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="sqlTable" ForeColor="Black" GridLines="Vertical" Width="780px" OnSelectedIndexChanged="tblCustomers_SelectedIndexChanged" AllowPaging="True" PageSize="20">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" />

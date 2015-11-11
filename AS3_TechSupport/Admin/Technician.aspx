@@ -74,8 +74,8 @@
                     </asp:SqlDataSource>
                     <asp:SqlDataSource ID="sqlFirst" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID"></asp:SqlDataSource>
                     <asp:SqlDataSource ID="sqlLast" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID DESC"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlPrevious" runat="server"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlNext" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TechID, Name, Email, Phone FROM Technicians WHERE (TechID &gt; @TechID) ORDER BY TechID ASC LIMIT 1">
+                    <asp:SqlDataSource ID="sqlPrevious" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &lt; @TechID) ORDER BY TechID DESC"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlNext" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &gt; @TechID) ORDER BY TechID ASC">
                         <SelectParameters>
                             <asp:Parameter Name="TechID" Type="Int32" />
                         </SelectParameters>

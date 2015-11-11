@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 166px;
+            width: 55px;
         }
         .auto-style2 {
             width: 260px;
@@ -12,7 +12,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width: 100%;">
         <tr>
-            <td class="auto-style1">
+            <td class="auto-style1" style="text-align: right">
                 <asp:Label ID="lblTechID" runat="server" CssClass="label" Text="TechID:"></asp:Label>
             </td>
             <td class="auto-style2">
@@ -21,7 +21,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td aria-disabled="False" class="auto-style1">
+            <td aria-disabled="False" class="auto-style1" style="text-align: right">
                 <asp:Label ID="lblTechName" runat="server" CssClass="label" Text="Name:"></asp:Label>
             </td>
             <td class="auto-style2">
@@ -30,7 +30,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">
+            <td class="auto-style1" style="text-align: right">
                 <asp:Label ID="lblTechEmail" runat="server" CssClass="label" Text="Email:"></asp:Label>
             </td>
             <td class="auto-style2">
@@ -39,13 +39,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">
+            <td class="auto-style1" style="text-align: right">
                 <asp:Label ID="lblTechPhone" runat="server" CssClass="label" Text="Phone:"></asp:Label>
             </td>
             <td class="auto-style2">
                 <asp:TextBox ID="txtTechPhone" runat="server" CssClass="textbox"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td style="text-align: right">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">
