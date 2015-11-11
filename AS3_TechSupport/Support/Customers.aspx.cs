@@ -22,9 +22,16 @@ namespace AS3_TechSupport.Support {
 
         protected void btnSearch_Click(object sender, EventArgs e) {
             //calls the query method to search the customers table for the given ID
-            if (txtSearch.Text != "") {
-                string customerID = txtSearch.Text;
-                Query(customerID);
+            try {
+                if (txtSearch.Text != "") {
+                    string customerID = txtSearch.Text;
+                    Query(customerID);
+                }
+            } catch (Exception) {
+                MessageBox.Show(
+                    this, "Please enter a valid Customer ID.");
+                txtSearch.Text = "";
+                txtSearch.Focus();
             }
         }
 
@@ -57,17 +64,6 @@ namespace AS3_TechSupport.Support {
                 txtPhone.Text = infoRow["Phone"].ToString();
                 txtEmail.Text = infoRow["Email"].ToString();
             }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e) {
-            string customerID = txtCustomerID.Text;
-            Delete(customerID);
-        }
-
-        protected void Delete(string customerID) {
-            sqlDelete.DeleteParameters.Clear();
-            sqlDelete.DeleteParameters.Add("CustomerID", customerID);
-            //string deleteQuery = "DELETE FROM Customers WHERE (CustomerID = @customerID)";
         }
 
         protected void btnAddCustomer_Click(object sender, EventArgs e) {

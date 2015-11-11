@@ -7,6 +7,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/*****************************
+ * Author: Ryan Gallagher
+ * **************************/
+
 namespace AS3_TechSupport {
     public partial class AddCustomer : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
@@ -24,7 +28,7 @@ namespace AS3_TechSupport {
             }
         }
 
-        protected void btnAdd_Click(object sender, EventArgs e) {
+        private void Add() {
             try {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
                 conn.Open();
@@ -34,7 +38,7 @@ namespace AS3_TechSupport {
                 com.Parameters.AddWithValue("@name", txtName.Text);
                 com.Parameters.AddWithValue("@address", txtAddress.Text);
                 com.Parameters.AddWithValue("@city", txtCity.Text);
-                com.Parameters.AddWithValue("@state", txtState.Text);
+                com.Parameters.AddWithValue("@state", ddlState.SelectedItem.Text);
                 com.Parameters.AddWithValue("@zipcode", txtZip.Text);
                 com.Parameters.AddWithValue("@phone", txtPhone.Text);
                 com.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -47,6 +51,15 @@ namespace AS3_TechSupport {
                 conn.Close();
             } catch (Exception ex) {
                 Response.Write("Error" + ex.ToString());
+            }
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e) {
+            if (txtName.Text != "" && txtAddress.Text != "" && txtCity.Text != "" && txtZip.Text != "") {
+                Add();
+            } else {
+                MessageBox.Show(
+                    this, "One or more of the required fields does not contain an acceptable value.");
             }
         }
 

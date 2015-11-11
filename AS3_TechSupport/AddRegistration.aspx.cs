@@ -59,7 +59,7 @@ namespace AS3_TechSupport
             {
                 sqlAddRegistration.Insert();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 //string duplicate = "Registration is Complete";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Duplicate data entry!! User can only have product registered once" + "');", true);
