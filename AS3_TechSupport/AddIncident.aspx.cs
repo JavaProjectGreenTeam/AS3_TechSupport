@@ -27,7 +27,7 @@ namespace AS3_TechSupport
             string dateTime = DateTime.Now.ToShortDateString();
 
             //getting information from sql db
-            sqlAddIncident.InsertParameters.Add("
+           // sqlAddIncident.InsertParameters.Add("
         }
     }
 }
