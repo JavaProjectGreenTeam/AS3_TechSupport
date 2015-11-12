@@ -12,8 +12,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style1">
+                <asp:Label ID="lblProductCode" runat="server" CssClass="label" Text="Product Code: "></asp:Label>
+            </td>
+            <td class="auto-style2">
+                <asp:TextBox ID="txtProductCode" runat="server" CssClass="textbox"></asp:TextBox>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -49,7 +53,7 @@
             </td>
             <td class="auto-style2">
                 <asp:Button ID="btnProductCancel" runat="server" CssClass="button" Text="Cancel" />
-                <asp:SqlDataSource ID="sqlAddProduct" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Products(Name, Version, ReleaseDate) VALUES (@Name, @Version, @ReleaseDate)" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlAddProduct" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Products(Name, Version, ReleaseDate, ProductCode) VALUES (@Name, @Version, @ReleaseDate, @ProductCode)" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
             </td>
             <td>&nbsp;</td>
         </tr>

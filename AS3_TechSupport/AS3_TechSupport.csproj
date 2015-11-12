@@ -78,7 +78,6 @@
     <Content Include="Styles\Main.css" />
     <Content Include="Support\Customers.aspx" />
     <Content Include="Tech\CustomerIncidents.aspx" />
-    <Content Include="Tech\IncidentAdded.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -167,13 +166,6 @@
     </Compile>
     <Compile Include="Tech\CustomerIncidents.aspx.designer.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Tech\IncidentAdded.aspx.cs">
-      <DependentUpon>IncidentAdded.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Tech\IncidentAdded.aspx.designer.cs">
-      <DependentUpon>IncidentAdded.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

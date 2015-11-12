@@ -31,6 +31,7 @@ font-size: 1.2em;
     width: 800px;
     margin-right: auto;
     margin-left: auto;
+    overflow: auto;
 }
 
 
@@ -42,11 +43,13 @@ font-size: 1.2em;
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: #FF9900;
+    overflow: auto;
 }
 
 .content {
     width: 100%;
     padding: 10px;
+    overflow: auto;
 }
 
 .contentContainer {
@@ -63,6 +66,7 @@ font-size: 1.2em;
     width: 800px;
     margin-right: auto;
     margin-left: auto;
+    overflow: auto;
 }
 
 /*Element Class Styles*/
@@ -81,7 +85,7 @@ font-size: 1.2em;
     font-family: 'Century Gothic';
     width: 220px;
     margin: 2px;
-    }
+}
 
 .multilineTextbox {
     resize: none;
@@ -105,12 +109,37 @@ font-size: 1.2em;
     font-size: medium;
 }
 
+.loginUser {
+    /*float: right;*/
+    float: right;
+    font-family: 'Century Gothic';
+    color: #FF9900;
+    font-size: 1.25em;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.loginStatus {
+    /*float: right;*/
+    float: right;
+    font-family: 'Century Gothic';
+    font-size: 1.2em;
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 5px;
+    line-height: 1.35em;
+}
+
 .headerTitle {
     margin: 0px;
     padding-left: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
     font-size: 3em;
+    width: 50%;
+    float: left;
+    /*float: left;*/
 }
 
 .copyright {
@@ -119,8 +148,8 @@ font-size: 1.2em;
     padding: 5px;
 }
 
-.navBarMenu {
-    /*padding-left: 10px;*/
+.navBarMenuDiv {
+    float: left;
 }
 
 .navBarMenu ul li a {

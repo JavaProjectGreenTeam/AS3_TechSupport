@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <table style="width:100%;">
+    <table style="width:100%; height: 230px;">
         <tr>
             <td class="auto-style1">
     <asp:Login ID="Login1" runat="server" CssClass="login" OnAuthenticate="Login1_Authenticate" Width="240px">
@@ -21,21 +21,38 @@
 
             </td>
             <td class="auto-style2">
-                <asp:RequiredFieldValidator ID="rfvUsername" runat="server" CssClass="label" ErrorMessage="RequiredFieldValidator">Requires a known Username</asp:RequiredFieldValidator>
                 <br />
-                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" CssClass="label" ErrorMessage="RequiredFieldValidator">Requires a known Password</asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Login ID="Login2" runat="server">
+                </asp:Login>
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:LoginName ID="LoginName1" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
+            <td>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Test">
+                        </asp:RoleGroup>
+                    </RoleGroups>
+                </asp:LoginView>
+            </td>
         </tr>
     </table>
 &nbsp;
