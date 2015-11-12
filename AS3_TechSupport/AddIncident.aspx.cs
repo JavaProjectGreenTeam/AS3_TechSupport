@@ -13,5 +13,21 @@ namespace AS3_TechSupport
         {
 
         }
+
+        protected void btnAddIncident_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Add()
+        {
+            //clear data source parameters
+            sqlAddIncident.SelectParameters.Clear();
+
+            //adding parameters
+            string dateTime = DateTime.Now.ToShortDateString();
+
+            //getting information from sql db
+            sqlAddIncident.InsertParameters.Add("
+        }
     }
 }
