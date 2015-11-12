@@ -10,17 +10,13 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:SqlDataSource ID="TechSupportAddIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Products]"></asp:SqlDataSource>
     <table style="width:100%;">
         <tr>
             <td class="auto-style1" style="text-align: right">
-    <asp:Label ID="lblCustomerID" runat="server" CssClass="label" Font-Size="Small" Text="CustomerID:"></asp:Label>
-            </td>
-            <td class="auto-style2"><asp:TextBox ID="txtCustomerID" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
-            </td>
+                &nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
             <td>
-    <asp:Button ID="btnCustomerID" runat="server" CssClass="button" Font-Size="Small" Text="Get Customer" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1" style="text-align: right">
@@ -82,7 +78,10 @@
             <td class="auto-style2">
     <asp:TextBox ID="txtDescription" runat="server" CssClass="multilineTextbox textbox" Font-Size="Small" Rows="4" TextMode="MultiLine"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="btnAddIncident" runat="server" CssClass="button" OnClick="btnAddIncident_Click" Text="Add Incident" />
+                <asp:SqlDataSource ID="sqlAddIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Incidents(CustomerID, ProductCode, DateOpened, DateClosed, Title, Description) VALUES (@CustomerID, @ProductCode, @DateOpened, @DateClosed, @Title, @Description)" SelectCommand="SELECT * FROM [Incidents]"></asp:SqlDataSource>
+            </td>
         </tr>
     </table>
     <br />

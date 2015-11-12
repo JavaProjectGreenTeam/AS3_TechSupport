@@ -13,42 +13,6 @@ namespace AS3_TechSupport {
     public partial class AddIncident {
         
         /// <summary>
-        /// TechSupportAddIncident control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource TechSupportAddIncident;
-        
-        /// <summary>
-        /// lblCustomerID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCustomerID;
-        
-        /// <summary>
-        /// txtCustomerID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomerID;
-        
-        /// <summary>
-        /// btnCustomerID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerID;
-        
-        /// <summary>
         /// lblCustomerID2 control.
         /// </summary>
         /// <remarks>
@@ -155,5 +119,23 @@ namespace AS3_TechSupport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        
+        /// <summary>
+        /// btnAddIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddIncident;
+        
+        /// <summary>
+        /// sqlAddIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlAddIncident;
     }
 }
