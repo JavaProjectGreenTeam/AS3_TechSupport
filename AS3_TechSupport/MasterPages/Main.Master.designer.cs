@@ -31,6 +31,15 @@ namespace AS3_TechSupport.MasterPages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// logName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginName logName;
+        
+        /// <summary>
         /// mnuNavBar control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace AS3_TechSupport.MasterPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Menu mnuNavBar;
+        
+        /// <summary>
+        /// logStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginStatus logStatus;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

@@ -13,12 +13,14 @@
     <form id="form1" runat="server">
         <div class="header">
             <h1 class="headerTitle">Tech Support</h1>
+            <asp:LoginName ID="logName" runat="server" CssClass="loginUser" EnableTheming="True" />
         </div>
 
         <div class="navBar">
-
-            <asp:Menu ID="mnuNavBar" runat="server" CssClass="navBarMenu" DataSourceID="SiteMapSourceNavBar" MaximumDynamicDisplayLevels="0" Orientation="Horizontal" StaticDisplayLevels="2">
-            </asp:Menu>
+            <div class="navBarMenuDiv">
+                <asp:Menu ID="mnuNavBar" runat="server" CssClass="navBarMenu" DataSourceID="SiteMapSourceNavBar" MaximumDynamicDisplayLevels="0" Orientation="Horizontal" StaticDisplayLevels="2"></asp:Menu>
+            </div>
+            <asp:LoginStatus ID="logStatus" runat="server" CssClass="loginStatus" />
 
         </div>
 
