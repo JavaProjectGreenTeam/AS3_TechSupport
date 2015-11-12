@@ -6,6 +6,6 @@
     <siteMapNode title="Customers"  description=""  url="~/Support/Customers.aspx"/>
     <siteMapNode title="Incidents"  description=""  url="~/Tech/CustomerIncidents.aspx"/>
     <siteMapNode title="Registrations"  description=""  url="~/AddRegistration.aspx"/>
-    <siteMapNode title="Login"  description=""  url="~/Login.aspx"/>
+    <!--<siteMapNode title="Login"  description=""  url="~/Login.aspx"/>-->
   </siteMapNode>
 </siteMap>
