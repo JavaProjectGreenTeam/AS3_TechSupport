@@ -57,7 +57,7 @@
     <asp:Label ID="lblProduct" runat="server" CssClass="label" Font-Size="Small" Text="Product:"></asp:Label>
             </td>
             <td class="auto-style2">
-    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="TechSupportAddIncident" DataTextField="Name" DataValueField="Name" CssClass="dropdown">
+    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataTextField="Name" DataValueField="Name" CssClass="dropdown">
     </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
