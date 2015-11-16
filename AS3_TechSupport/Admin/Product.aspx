@@ -28,11 +28,11 @@
     <table style="width:100%;">
         <tr>
             <td class="auto-style4">
-                <asp:Button ID="btnProductFirst" runat="server" CssClass="button" Text="&lt;&lt;" />
-                <asp:Button ID="btnProductPrevious" runat="server" CssClass="button" Text="&lt;" />
+                <asp:Button ID="btnProductFirst" runat="server" CssClass="button" Text="&lt;&lt;" OnClick="btnProductFirst_Click" />
+                <asp:Button ID="btnProductPrevious" runat="server" CssClass="button" Text="&lt;" OnClick="btnProductPrevious_Click" />
                 <asp:TextBox ID="txtProduct" runat="server" CssClass="textbox" Width="100px"></asp:TextBox>
-                <asp:Button ID="btnProductNext" runat="server" CssClass="button" Text="&gt;" />
-                <asp:Button ID="btnProductLast" runat="server" CssClass="button" Text="&gt;&gt;" />
+                <asp:Button ID="btnProductNext" runat="server" CssClass="button" Text="&gt;" OnClick="btnProductNext_Click" />
+                <asp:Button ID="btnProductLast" runat="server" CssClass="button" Text="&gt;&gt;" OnClick="btnProductLast_Click" />
             </td>
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style6"></td>

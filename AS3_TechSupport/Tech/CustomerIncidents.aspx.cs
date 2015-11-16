@@ -60,5 +60,15 @@ namespace AS3_TechSupport {
 
         protected void sqlCustomerInfo_Selected(object sender, SqlDataSourceStatusEventArgs e) {
         }
+
+        protected void btnAddIncident_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Support/AddIncident.aspx");
+        }
+
+        protected void btnManageIncidents_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Tech/ManageIncident.aspx");
+        }
     }
 }
