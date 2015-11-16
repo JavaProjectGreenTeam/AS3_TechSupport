@@ -4,7 +4,7 @@
     <siteMapNode title="Products"  description=""  url="~/Admin/Product.aspx"/>
     <siteMapNode title="Technicians"  description=""  url="~/Admin/Technician.aspx"/>
     <siteMapNode title="Customers"  description=""  url="~/Support/Customers.aspx"/>
-    <siteMapNode title="Incidents"  description=""  url="~/Tech/CustomerIncidents.aspx"/>
+    <siteMapNode title="Incidents"  description=""  url="~/Support/CustomerIncidents.aspx"/>
     <siteMapNode title="Registrations"  description=""  url="~/Support/AddRegistration.aspx"/>
   </siteMapNode>
 </siteMap>
