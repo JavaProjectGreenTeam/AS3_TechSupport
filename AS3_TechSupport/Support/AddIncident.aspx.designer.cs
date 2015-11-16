@@ -76,24 +76,6 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.TextBox txtIncidentID;
         
         /// <summary>
-        /// lblTechID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTechID;
-        
-        /// <summary>
-        /// txtTechID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTechID;
-        
-        /// <summary>
         /// lblDateOpened control.
         /// </summary>
         /// <remarks>
@@ -112,22 +94,40 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.TextBox txtDateOpened;
         
         /// <summary>
-        /// lblDateClosed control.
+        /// lblProductName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateClosed;
+        protected global::System.Web.UI.WebControls.Label lblProductName;
         
         /// <summary>
-        /// txtDateClosed control.
+        /// ddlProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDateClosed;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProduct;
+        
+        /// <summary>
+        /// btnProductCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProductCode;
+        
+        /// <summary>
+        /// sqlProductName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlProductName;
         
         /// <summary>
         /// sqlAddIncident control.
@@ -166,22 +166,22 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.SqlDataSource sqlCustomerID;
         
         /// <summary>
-        /// lblProduct control.
+        /// lblProductCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProduct;
+        protected global::System.Web.UI.WebControls.Label lblProductCode;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// txtProductCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtProductCode;
         
         /// <summary>
         /// lblTitle control.
