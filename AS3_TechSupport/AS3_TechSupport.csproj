@@ -78,6 +78,7 @@
     <Content Include="Styles\Main.css" />
     <Content Include="Support\Customers.aspx" />
     <Content Include="Tech\CustomerIncidents.aspx" />
+    <Content Include="Tech\ManageIncident.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -168,6 +169,13 @@
     <Compile Include="Tech\CustomerIncidents.aspx.designer.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tech\ManageIncident.aspx.cs">
+      <DependentUpon>ManageIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tech\ManageIncident.aspx.designer.cs">
+      <DependentUpon>ManageIncident.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +188,7 @@
     <Content Include="MasterPages\Main.Master" />
     <Content Include="Admin\web.config" />
     <Content Include="Tech\web.config" />
+    <Content Include="Support\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
