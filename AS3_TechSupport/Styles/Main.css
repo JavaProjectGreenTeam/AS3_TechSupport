@@ -81,6 +81,12 @@ font-size: 1.2em;
     margin-top: 0px;
 }
 
+.calendar {
+    width: 230px;
+    height: 30px;
+    margin: 2px;
+}
+
 .textbox {
     font-family: 'Century Gothic';
     width: 220px;
@@ -89,6 +95,9 @@ font-size: 1.2em;
 
 .multilineTextbox {
     resize: none;
+    width: 220px;
+    margin: 2px;
+    font-size: small;
 }
 
 .dropdown {

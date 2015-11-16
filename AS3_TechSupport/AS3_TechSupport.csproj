@@ -58,10 +58,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AddProduct.aspx" />
+    <Content Include="AddProduct.aspx" />
     <Content Include="Support\AddCustomer.aspx" />
-    <Content Include="Support\AddIncident.aspx" />
-    <Content Include="Support\AddRegistration.aspx" />
+    <Content Include="AddIncident.aspx" />
+    <Content Include="AddRegistration.aspx" />
     <Content Include="Admin\AddTechnician.aspx" />
     <Content Include="Admin\Product.aspx" />
     <Content Include="Admin\Technician.aspx" />
@@ -73,19 +73,21 @@
     <Content Include="App_Data\TechSupport_log.ldf">
       <DependentUpon>TechSupport.mdf</DependentUpon>
     </Content>
+    <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Styles\Main.css" />
     <Content Include="Support\Customers.aspx" />
     <Content Include="Tech\CustomerIncidents.aspx" />
-    <Content Include="Admin\UserRegistration.aspx" />
+    <Content Include="Tech\ManageIncident.aspx" />
+    <Content Include="UserRegistration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddProduct.aspx.cs">
+    <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddProduct.aspx.designer.cs">
+    <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Support\AddCustomer.aspx.cs">
@@ -95,18 +97,18 @@
     <Compile Include="Support\AddCustomer.aspx.designer.cs">
       <DependentUpon>AddCustomer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Support\AddIncident.aspx.cs">
+    <Compile Include="AddIncident.aspx.cs">
       <DependentUpon>AddIncident.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Support\AddIncident.aspx.designer.cs">
+    <Compile Include="AddIncident.aspx.designer.cs">
       <DependentUpon>AddIncident.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Support\AddRegistration.aspx.cs">
+    <Compile Include="AddRegistration.aspx.cs">
       <DependentUpon>AddRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Support\AddRegistration.aspx.designer.cs">
+    <Compile Include="AddRegistration.aspx.designer.cs">
       <DependentUpon>AddRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddTechnician.aspx.cs">
@@ -129,6 +131,13 @@
     </Compile>
     <Compile Include="Admin\Technician.aspx.designer.cs">
       <DependentUpon>Technician.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -160,11 +169,18 @@
     <Compile Include="Tech\CustomerIncidents.aspx.designer.cs">
       <DependentUpon>CustomerIncidents.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserRegistration.aspx.cs">
+    <Compile Include="Tech\ManageIncident.aspx.cs">
+      <DependentUpon>ManageIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tech\ManageIncident.aspx.designer.cs">
+      <DependentUpon>ManageIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserRegistration.aspx.designer.cs">
+    <Compile Include="UserRegistration.aspx.designer.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -172,6 +188,7 @@
     <Content Include="MasterPages\Main.Master" />
     <Content Include="Admin\web.config" />
     <Content Include="Tech\web.config" />
+    <Content Include="Support\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
