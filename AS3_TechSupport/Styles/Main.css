@@ -1,4 +1,8 @@
 ﻿/*Default Tag Styles*/
+html {
+    overflow-y: scroll;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -26,6 +30,27 @@ p {
 font-family: 'Century Gothic';
 font-size: 1.2em;
 }  
+
+/*Sticky Footer CSS*/
+html, body, form {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -31px;
+}
+
+.footer, .push {
+    height: 31px;
+}
+
 
 /*Div Class Styles*/
 .header {
@@ -70,8 +95,8 @@ font-size: 1.2em;
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    overflow: auto;
 }
+
 
 /*Element Class Styles*/
 .label {
@@ -161,6 +186,9 @@ font-size: 1.2em;
 
 .navBarMenuDiv {
     float: left;
+}
+
+.navBarMenu {
 }
 
 .navBarMenu ul li a {

@@ -11,27 +11,29 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
-            <h1 class="headerTitle">Tech Support</h1>
-            <asp:LoginName ID="logName" runat="server" CssClass="loginUser" EnableTheming="True" />
-        </div>
-
-        <div class="navBar">
-            <div class="navBarMenuDiv">
-                <asp:Menu ID="mnuNavBar" runat="server" CssClass="navBarMenu" DataSourceID="SiteMapSourceNavBar" MaximumDynamicDisplayLevels="0" Orientation="Horizontal" StaticDisplayLevels="2"></asp:Menu>
+        <div class="wrapper">
+            <div class="header">
+                <h1 class="headerTitle">Tech Support</h1>
+                <asp:LoginName ID="logName" runat="server" CssClass="loginUser" EnableTheming="True" />
             </div>
-            <asp:LoginStatus ID="logStatus" runat="server" CssClass="loginStatus" />
 
-        </div>
+            <div class="navBar">
+                <div class="navBarMenuDiv">
+                    <asp:Menu ID="mnuNavBar" runat="server" CssClass="navBarMenu" DataSourceID="SiteMapSourceNavBar" MaximumDynamicDisplayLevels="4" Orientation="Horizontal" StaticDisplayLevels="2"></asp:Menu>
+                </div>
+                <asp:LoginStatus ID="logStatus" runat="server" CssClass="loginStatus" />
 
-        <div class ="contentContainer">
-            <div class="content">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </div>
+
+            <div class ="contentContainer">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
-                </asp:ContentPlaceHolder>
+                    </asp:ContentPlaceHolder>
+                </div>
             </div>
+            <div class="push"></div>
         </div>
-
         <div class="footer">
             <p class ="copyright">&#169; 2015 Project Green Team</p>
         </div>
