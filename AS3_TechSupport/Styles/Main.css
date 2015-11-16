@@ -7,11 +7,13 @@ body {
 
 h1 {
     font-family: 'Century Gothic';
-    color: #FF9900;
-    font-weight: bold;
+    margin: 0px;
+    /*color: #FF9900;*/
+    /*font-weight: bold;*/
 }
 
 p {
+    font-family: 'Century Gothic';
     margin: 0;
 }
 
@@ -47,9 +49,11 @@ font-size: 1.2em;
 }
 
 .content {
-    width: 100%;
+    /*width: 100%;*/
     padding: 10px;
     overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .contentContainer {
@@ -118,7 +122,6 @@ font-size: 1.2em;
 }
 
 .loginUser {
-    /*float: right;*/
     float: right;
     font-family: 'Century Gothic';
     color: #FF9900;
@@ -128,7 +131,6 @@ font-size: 1.2em;
 }
 
 .loginStatus {
-    /*float: right;*/
     float: right;
     font-family: 'Century Gothic';
     font-size: 1.2em;
@@ -140,6 +142,8 @@ font-size: 1.2em;
 }
 
 .headerTitle {
+    font-family: 'Century Gothic';
+    color: #FF9900;
     margin: 0px;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -147,7 +151,6 @@ font-size: 1.2em;
     font-size: 3em;
     width: 50%;
     float: left;
-    /*float: left;*/
 }
 
 .copyright {
@@ -164,7 +167,6 @@ font-size: 1.2em;
     font-family: 'Century Gothic';
     font-size: 1.2em;
     color: #FF9900;
-    /*width: 70px;*/
     font-weight: bold;
     text-align: center;
     text-decoration: none;
