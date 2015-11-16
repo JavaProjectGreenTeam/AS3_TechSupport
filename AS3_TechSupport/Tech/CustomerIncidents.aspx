@@ -19,71 +19,94 @@
         .auto-style6 {
             width: 54px;
         }
+        .auto-style7 {
+            width: 1283px;
+        }
+        .auto-style8 {
+            width: 1283px;
+            height: 31px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table style="width:100%;">
+        <table style="margin-right: auto; margin-left: auto;">
             <tr>
-                <td class="auto-style6" style="text-align: right">
+                <td class="auto-style4" style="text-align: right">
         <asp:Label ID="lblCustomerID1" runat="server" CssClass="label" Text="CustomerID:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3"><asp:TextBox ID="txtCustomerID1" runat="server" Font-Size="Small" CssClass="textbox"></asp:TextBox>
+                <td class="auto-style8"><asp:TextBox ID="txtCustomerID1" runat="server" Font-Size="Small" CssClass="textbox"></asp:TextBox>
         <asp:Button ID="btnGetCustomer" runat="server" CssClass="button" Font-Size="Small" Text="Get Customer" OnClick="btnGetCustomer_Click" />
+                </td>
+                <td class="auto-style5" style="text-align: right">
+                    <asp:Button ID="btnAddIncident" runat="server" CssClass="button" Text="Add Incident" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">
         <asp:Label ID="CustomerID2" runat="server" CssClass="label" Text="Customer ID:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style7">
         <asp:TextBox ID="txtCustomerID2" runat="server" Font-Size="Small" ReadOnly="True" CssClass="textbox"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">
         <asp:Label ID="lblName" runat="server" CssClass="label" Text="Name:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style7">
         <asp:TextBox ID="txtName" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">
         <asp:Label ID="lblAddress" runat="server" CssClass="label" Text="Address:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style7">
         <asp:TextBox ID="txtAddress" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style4" style="text-align: right">
         <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style5">
+                <td class="auto-style8">
         <asp:TextBox ID="txtCity" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
         <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="40px"></asp:TextBox>
         <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True" Width="140px"></asp:TextBox>
                 </td>
+                <td class="auto-style5">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style1" style="text-align: right">
         <asp:Label ID="lblPhone" runat="server" CssClass="label" Text="Phone:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style7">
         <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">
         <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email:" Font-Size="Small"></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style7">
         <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
             </tr>
         </table>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
