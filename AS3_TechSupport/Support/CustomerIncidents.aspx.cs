@@ -63,12 +63,12 @@ namespace AS3_TechSupport {
 
         protected void btnAddIncident_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Support/AddIncident.aspx");
+            Response.Redirect("~/Support/AddIncident.aspx");
         }
 
         protected void btnManageIncidents_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Tech/ManageIncident.aspx");
+            Response.Redirect("~/Tech/ManageIncident.aspx");
         }
     }
 }
