@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 59px;
         }
         .auto-style2 {
             width: 731px;
@@ -10,19 +9,21 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table style="width:100%;">
+        <table style="margin-right: auto; margin-left: auto;">
             <tr>
-                <td class="auto-style1" style="text-align: right">
-                    &nbsp;</td>
-                <td class="auto-style2">
+                <td class="auto-style1" colspan="2">
                     <asp:Button ID="btnTechFirst" runat="server" CssClass="button" Text="&lt;&lt;" OnClick="btnTechFirst_Click" />
                     <asp:Button ID="btnPrevious" runat="server" CssClass="button" OnClick="btnPrevious_Click" Text="&lt;" />
                     <asp:Button ID="btnNext" runat="server" CssClass="button" Text="&gt;" OnClick="btnNext_Click" />
                     <asp:Button ID="btnTechLast" runat="server" CssClass="button" Text="&gt;&gt;" OnClick="btnTechLast_Click" />
                     <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" OnClick="btnTechnician_Click" />
-                &nbsp;<asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
-                &nbsp;<asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
-                &nbsp;<asp:Button ID="btnSearch" runat="server" CssClass="button" OnClick="btnSearch_Click" Text="Search" />
+                &nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1" style="vertical-align: middle;" colspan="2">
+                    <asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
+                    <asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small" Width="153px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" CssClass="button" OnClick="btnSearch_Click" Text="Search" />
                 </td>
             </tr>
             <tr>
