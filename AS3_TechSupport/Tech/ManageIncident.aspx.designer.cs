@@ -220,15 +220,6 @@ namespace AS3_TechSupport.Tech {
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
         
         /// <summary>
-        /// sqlGetIncident control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetIncident;
-        
-        /// <summary>
         /// sqlUpdateIncident control.
         /// </summary>
         /// <remarks>
@@ -236,6 +227,15 @@ namespace AS3_TechSupport.Tech {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource sqlUpdateIncident;
+        
+        /// <summary>
+        /// sqlGetIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetIncident;
         
         /// <summary>
         /// sqlCustomerName control.

@@ -110,6 +110,14 @@
                 <td class="auto-style3">
                     &nbsp;</td>
             </tr>
+            <tr>
+                <td class="auto-style6" style="text-align: right">
+                    &nbsp;</td>
+                <td class="auto-style7">
+                    &nbsp;</td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+            </tr>
         </table>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlIncidents" ForeColor="Black" GridLines="Vertical" Width="780px">
             <AlternatingRowStyle BackColor="White" />

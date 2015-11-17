@@ -53,9 +53,10 @@
             </td>
             <td class="auto-style2">
                 <asp:Button ID="btnProductCancel" runat="server" CssClass="button" Text="Cancel" />
+            </td>
+            <td>
                 <asp:SqlDataSource ID="sqlAddProduct" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Products(Name, Version, ReleaseDate, ProductCode) VALUES (@Name, @Version, @ReleaseDate, @ProductCode)" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
             </td>
-            <td>&nbsp;</td>
         </tr>
     </table>
 </asp:Content>
