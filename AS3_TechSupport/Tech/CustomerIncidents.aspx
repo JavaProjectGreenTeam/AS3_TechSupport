@@ -38,13 +38,15 @@
         <asp:Button ID="btnGetCustomer" runat="server" CssClass="button" Font-Size="Small" Text="Get Customer" OnClick="btnGetCustomer_Click" />
                 </td>
                 <td class="auto-style5" style="text-align: right">
-                    <asp:Button ID="btnAddIncident" runat="server" CssClass="button" Text="Add Incident" />
+                    <asp:Button ID="btnAddIncident" runat="server" CssClass="button" Text="Add Incident" OnClick="btnAddIncident_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">&nbsp;</td>
                 <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style3">
+                    <asp:Button ID="btnManageIncidents" runat="server" CssClass="button" OnClick="btnManageIncidents_Click" Text="Manage Incident" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style6" style="text-align: right">
