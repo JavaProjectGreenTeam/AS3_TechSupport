@@ -12,7 +12,11 @@ using System.Collections.Specialized;
 namespace AS3_TechSupport {
     public partial class Technician : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
-
+            if (!IsPostBack) {
+                sqlAllTechs.Select(new DataSourceSelectArguments());
+                gvTest.DataSource = sqlAllTechs;
+                gvTest.DataBind();
+            }
         }
 
 
@@ -31,18 +35,26 @@ namespace AS3_TechSupport {
 
         protected void btnTechFirst_Click(object sender, EventArgs e) {
             First();
+            //gvTest.DataSource = sqlFirst;
+            //gvTest.DataBind();
         }
 
         protected void btnTechLast_Click(object sender, EventArgs e) {
             Last();
+            gvTest.DataSource = sqlLast;
+            gvTest.DataBind();
         }
 
         protected void btnNext_Click(object sender, EventArgs e) {
             Next();
+            gvTest.DataSource = sqlNext;
+            gvTest.DataBind();
         }
 
         protected void btnPrevious_Click(object sender, EventArgs e) {
             Previous();
+            gvTest.DataSource = sqlPrevious;
+            gvTest.DataBind();
         }
 
 
@@ -51,7 +63,7 @@ namespace AS3_TechSupport {
         //===============//
 
         private void SetTextBoxes(DataView data) {
-            if (data != null) {
+            if (data != null && data.Count > 0) {
                 foreach (DataRowView infoRow in data) {
                     txtTechID1.Text = infoRow["TechID"].ToString();
                     txtName.Text = infoRow["Name"].ToString();
@@ -59,7 +71,17 @@ namespace AS3_TechSupport {
                     txtPhone.Text = infoRow["Phone"].ToString();
                 }
             } else {
-                txtTechID1.Text = txtName.Text = txtEmail.Text = txtPhone.Text = "";
+                //txtTechID1.Text = txtName.Text = txtEmail.Text = txtPhone.Text = "";
+            }
+        }
+
+        private void SetDataSource(SqlDataSource dataSource, DataView data) {
+            if (data.Count > 0) {
+                gvTest.DataSource = dataSource;
+                gvTest.DataBind();
+            } else {
+                //gvTest.DataSource = sqlAllTechs;
+                //gvTest.DataBind();
             }
         }
 

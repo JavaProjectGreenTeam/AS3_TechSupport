@@ -130,18 +130,13 @@
             <td class="auto-style5">
                 <asp:TextBox ID="txtDescription" runat="server" CssClass="multilineTextbox" ReadOnly="True" Rows="4" TextMode="MultiLine"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style3" style="text-align: right">
-                &nbsp;</td>
-            <td class="auto-style5">
+            <td>
+                <asp:SqlDataSource ID="sqlUpdateIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" UpdateCommand="UPDATE Incidents SET TechID = @TechID, DateClosed = @DateClosed"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="sqlGetIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Incidents] WHERE ([IncidentID] = @IncidentID)">
                     <SelectParameters>
                         <asp:Parameter Name="IncidentID" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlUpdateIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" UpdateCommand="UPDATE Incidents SET TechID = @TechID, DateClosed = @DateClosed"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="sqlCustomerName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
                     <SelectParameters>
                         <asp:Parameter Name="CustomerID" Type="Int32" />
@@ -159,7 +154,6 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </td>
-            <td>&nbsp;</td>
         </tr>
-    </table>
+        </table>
 </asp:Content>

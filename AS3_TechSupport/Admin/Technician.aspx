@@ -30,7 +30,21 @@
                 <td class="auto-style1" style="text-align: right">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    &nbsp;</td>
+                    <asp:SqlDataSource ID="sqlGetTech" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] WHERE ([TechID] = @TechID)">
+                        <SelectParameters>
+                            <asp:Parameter Name="TechID" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlAllTechs" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlFirst" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlLast" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID DESC"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlPrevious" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &lt; @TechID) ORDER BY TechID DESC"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlNext" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &gt; @TechID) ORDER BY TechID ASC">
+                        <SelectParameters>
+                            <asp:Parameter Name="TechID" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1" style="text-align: right">
@@ -64,24 +78,18 @@
         <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td class="auto-style1" style="text-align: right">
-                    &nbsp;</td>
-                <td class="auto-style2">
-                    <asp:SqlDataSource ID="sqlGetTech" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] WHERE ([TechID] = @TechID)">
-                        <SelectParameters>
-                            <asp:Parameter Name="TechID" Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlFirst" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlLast" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP (1) TechID, Name, Email, Phone FROM Technicians ORDER BY TechID DESC"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlPrevious" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &lt; @TechID) ORDER BY TechID DESC"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sqlNext" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT TOP(1) TechID, Name, Email, Phone FROM Technicians WHERE (TechID &gt; @TechID) ORDER BY TechID ASC">
-                        <SelectParameters>
-                            <asp:Parameter Name="TechID" Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                </td>
-            </tr>
-        </table>
-    </asp:Content>
+            </table>
+    
+            <asp:GridView ID="gvTest" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                <AlternatingRowStyle BackColor="White" />
+                <FooterStyle BackColor="#CCCC99" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F7DE" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                <SortedAscendingHeaderStyle BackColor="#848384" />
+                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                <SortedDescendingHeaderStyle BackColor="#575357" />
+            </asp:GridView>
+            </asp:Content>
