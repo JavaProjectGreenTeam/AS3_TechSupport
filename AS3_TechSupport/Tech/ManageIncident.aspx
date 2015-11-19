@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="ManageIncident.aspx.cs" Inherits="AS3_TechSupport.Tech.ManageIncident" %>
+<%@ PreviousPageType VirtualPath = "~/Tech/IncidentList.aspx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {

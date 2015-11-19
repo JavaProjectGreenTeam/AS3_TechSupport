@@ -9,7 +9,28 @@ using System.Web.UI.WebControls;
 namespace AS3_TechSupport.Tech {
     public partial class ManageIncident : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+            string selectedID = PreviousPage.SelectedID;
 
+            if (selectedID != "") {
+                //Clear sql parameters
+                sqlGetIncident.SelectParameters.Clear();
+
+                //Add sql parameters
+                sqlGetIncident.SelectParameters.Add("IncidentID", selectedID);
+
+                //Execute sql query
+                DataView incidentInfo = (DataView)sqlGetIncident.Select(new DataSourceSelectArguments());
+
+                //Populate text boxes from data
+                foreach (DataRowView infoRow in incidentInfo) {
+                    txtCustomerID.Text = infoRow["CustomerID"].ToString();
+                    txtIncidentID.Text = infoRow["IncidtentID"].ToString(); ;
+                    txtDateOpened.Text = infoRow["DateOpened"].ToString(); ;
+                    txtProductCode.Text = infoRow["ProductCode"].ToString(); ;
+                    txtTitle.Text = infoRow["Title"].ToString(); ;
+                    txtDescription.Text = infoRow["Description"].ToString(); ;
+                }
+            }
         }
 
         protected void btnGetTechID_Click(object sender, EventArgs e) {

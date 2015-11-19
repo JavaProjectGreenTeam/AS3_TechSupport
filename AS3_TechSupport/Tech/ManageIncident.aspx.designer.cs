@@ -272,5 +272,17 @@ namespace AS3_TechSupport.Tech {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource sqlProductName;
+        
+        /// <summary>
+        /// PreviousPage property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new AS3_TechSupport.Tech.IncidentList PreviousPage {
+            get {
+                return ((AS3_TechSupport.Tech.IncidentList)(base.PreviousPage));
+            }
+        }
     }
 }
