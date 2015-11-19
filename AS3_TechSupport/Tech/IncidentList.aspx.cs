@@ -12,13 +12,6 @@ namespace AS3_TechSupport.Tech {
             setSource(sqlAllIncidents);
         }
 
-        private string selectedID = "";
-        public string SelectedID {
-            get {
-                return selectedID;
-            }
-        }
-
         protected void btnSearch_Click(object sender, EventArgs e) {
             if (txtSearch.Text != "") {
                 //Clear sql parameters
@@ -48,9 +41,7 @@ namespace AS3_TechSupport.Tech {
 
         protected void gvIncidents_SelectedIndexChanged(object sender, EventArgs e) {
             GridViewRow selectedRow = gvIncidents.SelectedRow;
-            selectedID = selectedRow.Cells[1].Text;
-
-            Response.Redirect("~/Tech/ManageIncident.aspx");
+            Response.Redirect("~/Tech/ManageIncident.aspx?incidentID=" + selectedRow.Cells[1].Text);
         }
     }
 }

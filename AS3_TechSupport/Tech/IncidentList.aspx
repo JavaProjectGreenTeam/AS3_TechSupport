@@ -19,10 +19,10 @@
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
         
-    <asp:SqlDataSource ID="sqlAllIncidents" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT IncidentID, CustomerID, ProductCode, DateOpened, Title FROM Incidents WHERE (TechID IS NULL) AND (DateClosed IS NULL)"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlAllIncidents" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT IncidentID, CustomerID, ProductCode, DateOpened, Title FROM Incidents WHERE (DateClosed IS NULL)"></asp:SqlDataSource>
     <asp:SqlDataSource ID="sqlSearch" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [IncidentID], [CustomerID], [ProductCode], [DateOpened], [Title] FROM [Incidents] WHERE ([IncidentID] = @IncidentID)">
         <SelectParameters>
             <asp:Parameter Name="IncidentID" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-</asp:Content>
+    </asp:Content>
