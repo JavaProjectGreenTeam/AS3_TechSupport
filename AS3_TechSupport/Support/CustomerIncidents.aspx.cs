@@ -8,9 +8,13 @@ using System.Web.UI.WebControls;
 
 namespace AS3_TechSupport {
     public partial class CustomerIncidents : System.Web.UI.Page {
-        //protected DataView customerInfoOut;
 
         protected void Page_Load(object sender, EventArgs e) {
+            if (Request.IsAuthenticated) {
+                if (User.IsInRole("Admins") || User.IsInRole("Technicians")) {
+                    btnIncidentsList.Visible = true;
+                }
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e) {
@@ -41,10 +45,7 @@ namespace AS3_TechSupport {
             sqlIncidents.Select(new DataSourceSelectArguments());
 
             foreach (DataRowView infoRow in customerInfoOut) {
-                //DataRowView infoRow = customerInfoOut[0];
-
                 txtCustomerID2.Text = infoRow["CustomerID"].ToString();
-                //txtCustomerID2.Text = "Test";
                 txtName.Text = infoRow["Name"].ToString();
                 txtAddress.Text = infoRow["Address"].ToString();
                 txtCity.Text = infoRow["City"].ToString();
@@ -53,9 +54,6 @@ namespace AS3_TechSupport {
                 txtPhone.Text = infoRow["Phone"].ToString();
                 txtEmail.Text = infoRow["Email"].ToString();
             }
-
-            //MessageBox.Show("Hello");
-            //ClientScript.RegisterStartupScript(this.GetType(), "Test Dialog", "alert('" + "Hello" + "');", true);
         }
 
         protected void sqlCustomerInfo_Selected(object sender, SqlDataSourceStatusEventArgs e) {
@@ -68,7 +66,7 @@ namespace AS3_TechSupport {
 
         protected void btnManageIncidents_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Tech/ManageIncident.aspx");
+            Response.Redirect("~/Tech/IncidentList.aspx");
         }
     }
 }
