@@ -107,12 +107,22 @@ html, body, form {
 
 .button {
     font-family: 'Century Gothic';
+    width: 110px;
+}
+
+.buttonNav {
+    font-family: 'Century Gothic';
 }
 
 .calendar {
     width: 230px;
     height: 30px;
     margin: 2px;
+}
+
+.gridView {
+    width: 100%;
+    margin-top: 5px;
 }
 
 .textbox {

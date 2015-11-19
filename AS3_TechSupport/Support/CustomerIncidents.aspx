@@ -3,13 +3,13 @@
     <style type="text/css">
         .auto-style1 {
             height: 23px;
-            width: 54px;
+            width: 270px;
         }
         .auto-style3 {
             width: 522px;
         }
         .auto-style4 {
-            width: 54px;
+            width: 270px;
             height: 31px;
         }
         .auto-style5 {
@@ -17,13 +17,13 @@
             height: 31px;
         }
         .auto-style6 {
-            width: 54px;
+            width: 270px;
         }
         .auto-style7 {
-            width: 1283px;
+            width: 1356px;
         }
         .auto-style8 {
-            width: 1283px;
+            width: 1356px;
             height: 31px;
         }
     </style>
@@ -32,7 +32,7 @@
         <table style="margin-right: auto; margin-left: auto;">
             <tr>
                 <td class="auto-style4" style="text-align: right">
-        <asp:Label ID="lblCustomerID1" runat="server" CssClass="label" Text="CustomerID:" Font-Size="Small"></asp:Label>
+        <asp:Label ID="lblCustomerID1" runat="server" CssClass="label" Text="Customer ID:" Font-Size="Small"></asp:Label>
                 </td>
                 <td class="auto-style8"><asp:TextBox ID="txtCustomerID1" runat="server" Font-Size="Small" CssClass="textbox"></asp:TextBox>
         <asp:Button ID="btnGetCustomer" runat="server" CssClass="button" Font-Size="Small" Text="Get Customer" OnClick="btnGetCustomer_Click" />
@@ -44,8 +44,8 @@
             <tr>
                 <td class="auto-style6" style="text-align: right">&nbsp;</td>
                 <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style3">
-                    <asp:Button ID="btnManageIncidents" runat="server" CssClass="button" OnClick="btnManageIncidents_Click" Text="Manage Incident" />
+                <td class="auto-style3" style="text-align: right">
+                    <asp:Button ID="btnIncidentsList" runat="server" CssClass="button" OnClick="btnManageIncidents_Click" Text="All Incidents" Visible="False" />
                 </td>
             </tr>
             <tr>
@@ -107,6 +107,14 @@
                 <td class="auto-style7">
         <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox" Font-Size="Small" ReadOnly="True"></asp:TextBox>
                 </td>
+                <td class="auto-style3">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style6" style="text-align: right">
+                    &nbsp;</td>
+                <td class="auto-style7">
+                    &nbsp;</td>
                 <td class="auto-style3">
                     &nbsp;</td>
             </tr>

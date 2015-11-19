@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="ManageIncident.aspx.cs" Inherits="AS3_TechSupport.Tech.ManageIncident" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -56,9 +57,10 @@
             <td class="auto-style5">
                 <asp:DropDownList ID="ddlTechName" runat="server" CssClass="dropdown" DataSourceID="sqlTechName" DataTextField="Name" DataValueField="Name">
                 </asp:DropDownList>
+                <asp:TextBox ID="txtTechName" runat="server" CssClass="textbox" ReadOnly="True" Visible="False"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btnGetTechID" runat="server" CssClass="button" OnClick="btnGetTechID_Click" Text="Get ID" />
+                <asp:Button ID="btnGetTechID" runat="server" CssClass="buttonNav" OnClick="btnGetTechID_Click" Text="Get ID" />
             </td>
         </tr>
         <tr>
@@ -130,18 +132,14 @@
             <td class="auto-style5">
                 <asp:TextBox ID="txtDescription" runat="server" CssClass="multilineTextbox" ReadOnly="True" Rows="4" TextMode="MultiLine"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style3" style="text-align: right">
-                &nbsp;</td>
-            <td class="auto-style5">
+            <td>
+                <asp:SqlDataSource ID="sqlUpdateIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" UpdateCommand="UPDATE Incidents SET TechID = @TechID WHERE (IncidentID = @IncidentID)"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlCloseIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" UpdateCommand="UPDATE Incidents SET DateClosed = @DateClosed, TechID = @TechID WHERE (IncidentID = @IncidentID)"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="sqlGetIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Incidents] WHERE ([IncidentID] = @IncidentID)">
                     <SelectParameters>
                         <asp:Parameter Name="IncidentID" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlUpdateIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" UpdateCommand="UPDATE Incidents SET TechID = @TechID, DateClosed = @DateClosed"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="sqlCustomerName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
                     <SelectParameters>
                         <asp:Parameter Name="CustomerID" Type="Int32" />
@@ -153,13 +151,27 @@
                         <asp:Parameter Name="Name" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlGetTechName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Technicians] WHERE ([TechID] = @TechID)">
+                    <SelectParameters>
+                        <asp:Parameter Name="TechID" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
                 <asp:SqlDataSource ID="sqlProductName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Products] WHERE ([ProductCode] = @ProductCode)">
                     <SelectParameters>
                         <asp:Parameter Name="ProductCode" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </td>
-            <td>&nbsp;</td>
         </tr>
-    </table>
+        <tr>
+            <td class="auto-style3" style="text-align: right">
+                &nbsp;</td>
+            <td class="auto-style5" style="text-align: center">
+                <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update Incident" Width="48%" />
+                <asp:Button ID="btnClose" runat="server" OnClick="btnClose_Click" Text="Close Incident" Width="48%" />
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        </table>
 </asp:Content>
