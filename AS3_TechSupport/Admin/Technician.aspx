@@ -12,11 +12,11 @@
         <table style="margin-right: auto; margin-left: auto;">
             <tr>
                 <td class="auto-style1" colspan="2">
-                    <asp:Button ID="btnTechFirst" runat="server" CssClass="button" Text="&lt;&lt;" OnClick="btnTechFirst_Click" />
-                    <asp:Button ID="btnPrevious" runat="server" CssClass="button" OnClick="btnPrevious_Click" Text="&lt;" />
-                    <asp:Button ID="btnNext" runat="server" CssClass="button" Text="&gt;" OnClick="btnNext_Click" />
-                    <asp:Button ID="btnTechLast" runat="server" CssClass="button" Text="&gt;&gt;" OnClick="btnTechLast_Click" />
-                    <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" OnClick="btnTechnician_Click" />
+                    <asp:Button ID="btnTechFirst" runat="server" CssClass="buttonNav" Text="&lt;&lt;" OnClick="btnTechFirst_Click" />
+                    <asp:Button ID="btnPrevious" runat="server" CssClass="buttonNav" OnClick="btnPrevious_Click" Text="&lt;" />
+                    <asp:Button ID="btnNext" runat="server" CssClass="buttonNav" Text="&gt;" OnClick="btnNext_Click" />
+                    <asp:Button ID="btnTechLast" runat="server" CssClass="button, buttonNav" Text="&gt;&gt;" OnClick="btnTechLast_Click" />
+                    <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" OnClick="btnTechnician_Click" Width="130px" />
                 &nbsp;&nbsp;&nbsp;</td>
             </tr>
             <tr>
@@ -80,7 +80,7 @@
             </tr>
             </table>
     
-            <asp:GridView ID="gvTest" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+            <asp:GridView ID="gvTest" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" CssClass="gridView">
                 <AlternatingRowStyle BackColor="White" />
                 <FooterStyle BackColor="#CCCC99" />
                 <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
