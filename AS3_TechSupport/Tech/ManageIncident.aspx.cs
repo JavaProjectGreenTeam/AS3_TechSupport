@@ -33,9 +33,6 @@ namespace AS3_TechSupport.Tech {
                 }
 
                 if (txtTechID.Text != "") {
-                    ddlTechName.Visible = false;
-                    btnGetTechID.Visible = false;
-                    txtTechName.Visible = true;
 
                     //Resolve additional information
                     //Clear sql paramaters
@@ -47,8 +44,8 @@ namespace AS3_TechSupport.Tech {
                     //Execute sql query
                     DataView techInfo = (DataView)sqlGetTechName.Select(new DataSourceSelectArguments());
 
-                    //Populate text box
-                    txtTechName.Text = techInfo[0]["Name"].ToString();
+                    //Select value from drop down list
+                    ddlTechName.SelectedValue = techInfo[0]["Name"].ToString();
                 }
 
                 //Resolve additional information
