@@ -110,7 +110,7 @@ html, body, form {
     width: 110px;
 }
 
-.buttonNav {
+.buttonNav, .buttonAuto {
     font-family: 'Century Gothic';
 }
 
