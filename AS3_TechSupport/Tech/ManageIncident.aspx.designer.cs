@@ -85,6 +85,15 @@ namespace AS3_TechSupport.Tech {
         protected global::System.Web.UI.WebControls.DropDownList ddlTechName;
         
         /// <summary>
+        /// txtTechName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTechName;
+        
+        /// <summary>
         /// btnGetTechID control.
         /// </summary>
         /// <remarks>
@@ -229,6 +238,15 @@ namespace AS3_TechSupport.Tech {
         protected global::System.Web.UI.WebControls.SqlDataSource sqlUpdateIncident;
         
         /// <summary>
+        /// sqlCloseIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlCloseIncident;
+        
+        /// <summary>
         /// sqlGetIncident control.
         /// </summary>
         /// <remarks>
@@ -265,6 +283,15 @@ namespace AS3_TechSupport.Tech {
         protected global::System.Web.UI.WebControls.SqlDataSource sqlTechID;
         
         /// <summary>
+        /// sqlGetTechName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlGetTechName;
+        
+        /// <summary>
         /// sqlProductName control.
         /// </summary>
         /// <remarks>
@@ -272,5 +299,23 @@ namespace AS3_TechSupport.Tech {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource sqlProductName;
+        
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// btnClose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClose;
     }
 }
