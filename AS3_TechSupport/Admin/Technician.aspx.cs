@@ -23,8 +23,8 @@ namespace AS3_TechSupport {
         //===============//
 
         private void SetDataSource(SqlDataSource dataSource) {
-            gvTest.DataSource = dataSource;
-            gvTest.DataBind();
+            gvTechs.DataSource = dataSource;
+            gvTechs.DataBind();
         }
 
         protected void SearchTech() {

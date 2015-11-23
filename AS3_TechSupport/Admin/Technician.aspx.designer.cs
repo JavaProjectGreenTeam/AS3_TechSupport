@@ -94,6 +94,15 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
+        /// gvTechs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvTechs;
+        
+        /// <summary>
         /// sqlGetTech control.
         /// </summary>
         /// <remarks>
@@ -155,14 +164,5 @@ namespace AS3_TechSupport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfTechID;
-        
-        /// <summary>
-        /// gvTest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTest;
     }
 }
