@@ -34,35 +34,48 @@ namespace AS3_TechSupport
         protected void btnAddTechnician_Click(object sender, EventArgs e)
         {
             AddTech();
-
         }
         protected void AddTech()
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
-                conn.Open();
-                string insertQuery = " insert into Technicians (Name, Email, Phone) values (@name, @email, @phone)";
-                SqlCommand com = new SqlCommand(insertQuery, conn);
+            //Clear sql parameters
+            sqlAddTechnician.InsertParameters.Clear();
 
-                com.Parameters.AddWithValue("@name", txtTechName.Text);
-                com.Parameters.AddWithValue("@email", txtTechEmail.Text);
-                com.Parameters.AddWithValue("@phone", txtTechPhone.Text);
+            //Set sql parameters
+            sqlAddTechnician.InsertParameters.Add("Name", txtTechName.Text);
+            sqlAddTechnician.InsertParameters.Add("Email", txtTechEmail.Text);
+            sqlAddTechnician.InsertParameters.Add("Phone", txtTechPhone.Text);
 
-                com.ExecuteNonQuery();
-                string display = "Registration is Complete";
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
+            //Execute query
+            sqlAddTechnician.Insert();
+
+            //Redirect to technicians page
+            Response.Redirect("Technician.aspx");
+
+            //try
+            //{
+            //    SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TechSupportDB"].ConnectionString);
+            //    conn.Open();
+            //    string insertQuery = " insert into Technicians (Name, Email, Phone) values (@name, @email, @phone)";
+            //    SqlCommand com = new SqlCommand(insertQuery, conn);
+
+            //    com.Parameters.AddWithValue("@name", txtTechName.Text);
+            //    com.Parameters.AddWithValue("@email", txtTechEmail.Text);
+            //    com.Parameters.AddWithValue("@phone", txtTechPhone.Text);
+
+            //    com.ExecuteNonQuery();
+            //    string display = "Registration is Complete";
+            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + display + "');", true);
         
-                Response.Redirect("Technician.aspx");
+            //    Response.Redirect("Technician.aspx");
 
                
 
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Response.Write("Error" + ex.ToString());
-            }
+            //    conn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Response.Write("Error" + ex.ToString());
+            //}
 
         }
 
