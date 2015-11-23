@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="regUser" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ContinueDestinationPageUrl="~/Default.aspx" CssClass="login">
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ContinueDestinationPageUrl="~/Default.aspx" CssClass="login" LoginCreatedUser="False" RequireEmail="False">
         <WizardSteps>
             <asp:CreateUserWizardStep runat="server">
                 <ContentTemplate>

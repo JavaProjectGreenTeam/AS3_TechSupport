@@ -13,24 +13,6 @@ namespace AS3_TechSupport {
     public partial class AddTechnicianaspx {
         
         /// <summary>
-        /// lblTechID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTechID;
-        
-        /// <summary>
-        /// txtTechID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTechID;
-        
-        /// <summary>
         /// lblTechName control.
         /// </summary>
         /// <remarks>
@@ -103,12 +85,12 @@ namespace AS3_TechSupport {
         protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// sqlAddTechnician control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlAddTechnician;
     }
 }

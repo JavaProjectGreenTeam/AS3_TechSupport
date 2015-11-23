@@ -24,8 +24,9 @@ namespace AS3_TechSupport
 
         protected void btnAddIncident_Click(object sender, EventArgs e)
         {
-            //is calling the add() method upon clicking add incident
-            Add();
+            if (Validator.CheckFields(new TextBox[] { txtCustomerID2, txtProductCode, txtTitle, txtDescription })) {
+                Add();
+            }
         }
         private void Add()
         {
@@ -41,12 +42,15 @@ namespace AS3_TechSupport
 
             sqlAddIncident.InsertParameters.Add("CustomerID", txtCustomerID2.Text);
             sqlAddIncident.InsertParameters.Add("DateOpened", DbType.DateTime, DateTime.Parse(txtDateOpened.Text).ToString());
-            sqlAddIncident.InsertParameters.Add("ProductCode", ddlProduct.Text);
+            sqlAddIncident.InsertParameters.Add("ProductCode", txtProductCode.Text);
             sqlAddIncident.InsertParameters.Add("Title", txtTitle.Text);
             sqlAddIncident.InsertParameters.Add("Description", txtDescription.Text);
 
             //adds to textboxes
             sqlAddIncident.Insert();
+
+            //Redirect back to main incidents page
+            Server.Transfer("~/Support/CustomerIncidents.aspx");
         }
 
         protected void ddlName_SelectedIndexChanged(object sender, EventArgs e)

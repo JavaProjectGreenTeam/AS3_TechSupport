@@ -9,27 +9,43 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table style="margin-right: auto; margin-left: auto;">
+        <table style="width: 100%;">
             <tr>
-                <td class="auto-style1" colspan="2">
-                    <asp:Button ID="btnTechFirst" runat="server" CssClass="buttonNav" Text="&lt;&lt;" OnClick="btnTechFirst_Click" />
-                    <asp:Button ID="btnPrevious" runat="server" CssClass="buttonNav" OnClick="btnPrevious_Click" Text="&lt;" />
-                    <asp:Button ID="btnNext" runat="server" CssClass="buttonNav" Text="&gt;" OnClick="btnNext_Click" />
-                    <asp:Button ID="btnTechLast" runat="server" CssClass="button, buttonNav" Text="&gt;&gt;" OnClick="btnTechLast_Click" />
+                <td class="auto-style1">
+                    <asp:Button ID="btnTechFirst" runat="server" CssClass="buttonNav" Text="&lt;&lt;" OnClick="btnTechFirst_Click" ToolTip="First" />
+                    <asp:Button ID="btnPrevious" runat="server" CssClass="buttonNav" OnClick="btnPrevious_Click" Text="&lt;" ToolTip="Previous" />
+                    <asp:Button ID="btnNext" runat="server" CssClass="buttonNav" Text="&gt;" OnClick="btnNext_Click" ToolTip="Next" />
+                    <asp:Button ID="btnTechLast" runat="server" CssClass="button, buttonNav" Text="&gt;&gt;" OnClick="btnTechLast_Click" ToolTip="Last" />
+                    <asp:Button ID="btnShowAll" runat="server" CssClass="buttonAuto" Text="Show All" OnClick="btnShowAll_Click" />
+                </td>
+                <td class="auto-style1" style="text-align: right">
                     <asp:Button ID="btnTechnician" runat="server" CssClass="button" Text="Add Technician" OnClick="btnTechnician_Click" Width="130px" />
-                &nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style1" style="vertical-align: middle;" colspan="2">
-                    <asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
-                    <asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small" Width="153px"></asp:TextBox>
-                    <asp:Button ID="btnSearch" runat="server" CssClass="button" OnClick="btnSearch_Click" Text="Search" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1" style="text-align: right">
+                <td class="auto-style1" style="vertical-align: middle;">
+                    <asp:Label ID="lblTechID" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
+                    <asp:TextBox ID="txtTechID" runat="server" CssClass="textbox" Font-Size="Small" Width="105px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" CssClass="buttonAuto" OnClick="btnSearch_Click" Text="Search" />
+                </td>
+                <td class="auto-style1" style="vertical-align: middle;">
                     &nbsp;</td>
-                <td class="auto-style2">
+            </tr>
+            </table>
+    
+            <asp:GridView ID="gvTechs" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" CssClass="gridView">
+                <AlternatingRowStyle BackColor="White" />
+                <FooterStyle BackColor="#CCCC99" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F7DE" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                <SortedAscendingHeaderStyle BackColor="#848384" />
+                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                <SortedDescendingHeaderStyle BackColor="#575357" />
+            </asp:GridView>
+    
                     <asp:SqlDataSource ID="sqlGetTech" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT * FROM [Technicians] WHERE ([TechID] = @TechID)">
                         <SelectParameters>
                             <asp:Parameter Name="TechID" Type="Int32" />
@@ -44,52 +60,6 @@
                             <asp:Parameter Name="TechID" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1" style="text-align: right">
-                    <asp:Label ID="lblTechID0" runat="server" CssClass="label" Font-Size="Small" Text="TechID:"></asp:Label>
-                </td>
-                <td class="auto-style2">
-                    <asp:TextBox ID="txtTechID1" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1" style="text-align: right">
-        <asp:Label ID="lblName" runat="server" CssClass="label" Font-Size="Small" Text="Name:"></asp:Label>
-                </td>
-                <td class="auto-style2">
-        <asp:TextBox ID="txtName" runat="server" Font-Size="Small" CssClass="textbox"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1" style="text-align: right">
-        <asp:Label ID="lblEmail" runat="server" CssClass="label" Font-Size="Small" Text="Email:"></asp:Label>
-                </td>
-                <td class="auto-style2">
-        <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1" style="text-align: right">
-        <asp:Label ID="lblPhone" runat="server" CssClass="label" Font-Size="Small" Text="Phone:"></asp:Label>
-                </td>
-                <td class="auto-style2">
-        <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox" Font-Size="Small"></asp:TextBox>
-                </td>
-            </tr>
-            </table>
+                <asp:HiddenField ID="hfTechID" runat="server" />
     
-            <asp:GridView ID="gvTest" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" CssClass="gridView">
-                <AlternatingRowStyle BackColor="White" />
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
-            </asp:GridView>
             </asp:Content>
