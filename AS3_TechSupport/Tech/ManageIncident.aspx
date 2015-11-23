@@ -57,7 +57,6 @@
             <td class="auto-style5">
                 <asp:DropDownList ID="ddlTechName" runat="server" CssClass="dropdown" DataSourceID="sqlTechName" DataTextField="Name" DataValueField="Name">
                 </asp:DropDownList>
-                <asp:TextBox ID="txtTechName" runat="server" CssClass="textbox" ReadOnly="True" Visible="False"></asp:TextBox>
             </td>
             <td>
                 <asp:Button ID="btnGetTechID" runat="server" CssClass="buttonNav" OnClick="btnGetTechID_Click" Text="Get ID" />
@@ -167,8 +166,8 @@
             <td class="auto-style3" style="text-align: right">
                 &nbsp;</td>
             <td class="auto-style5" style="text-align: center">
-                <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update Incident" Width="48%" />
-                <asp:Button ID="btnClose" runat="server" OnClick="btnClose_Click" Text="Close Incident" Width="48%" />
+                <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" Width="48%" CssClass="buttonAuto" />
+                <asp:Button ID="btnClose" runat="server" OnClick="btnClose_Click" Text="Close Incident" Width="48%" CssClass="buttonAuto" />
             </td>
             <td>
                 &nbsp;</td>

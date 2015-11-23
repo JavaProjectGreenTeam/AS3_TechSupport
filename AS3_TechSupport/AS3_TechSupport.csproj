@@ -63,7 +63,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Support\AddCustomer.aspx" />
     <Content Include="Admin\AddTechnician.aspx" />
-    <Content Include="Admin\Product.aspx" />
+    <Content Include="Support\Product.aspx" />
     <Content Include="Admin\Technician.aspx" />
     <Content Include="App_Data\ASPNETDB.MDF" />
     <Content Include="App_Data\aspnetdb_log.ldf">
@@ -119,11 +119,11 @@
     <Compile Include="Admin\AddTechnician.aspx.designer.cs">
       <DependentUpon>AddTechnician.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Product.aspx.cs">
+    <Compile Include="Support\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Product.aspx.designer.cs">
+    <Compile Include="Support\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Technician.aspx.cs">
@@ -191,6 +191,7 @@
     <Compile Include="Tech\ManageIncident.aspx.designer.cs">
       <DependentUpon>ManageIncident.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\Main.Master" />

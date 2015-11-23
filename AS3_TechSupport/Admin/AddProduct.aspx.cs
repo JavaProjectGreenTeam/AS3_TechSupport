@@ -19,31 +19,52 @@ namespace AS3_TechSupport
 
             //adding parameters
             string dateTime = DateTime.Now.ToShortDateString();
-            txtProductRelease.Text = dateTime;
+            //txtProductRelease.Text = dateTime;
 
             //gets information from SQL database
             sqlAddProduct.InsertParameters.Add("ProductCode", txtProductCode.Text);
             sqlAddProduct.InsertParameters.Add("Name", txtProductName.Text);
             sqlAddProduct.InsertParameters.Add("Version", txtProductVersion.Text);
-            sqlAddProduct.InsertParameters.Add("ReleaseDate", DbType.DateTime, DateTime.Parse(txtProductRelease.Text).ToString());
-
-            //adds to textboxes
-            sqlAddProduct.Insert();
-
-            MessageBox.Show(this,"Product has been Added");
-            //Clears the textboxes
-            txtProductCode.Text = "";
-            txtProductName.Text = "";
-            txtProductRelease.Text = "";
-            txtProductVersion.Text = "";
-
+            //sqlAddProduct.InsertParameters.Add("ReleaseDate", DbType.DateTime, DateTime.Parse(txtProductRelease.Text).ToString());
+            sqlAddProduct.InsertParameters.Add("ReleaseDate", DbType.DateTime, calReleaseDate.SelectedDate.ToString());
 
             
+            //adds to database
+            sqlAddProduct.Insert();
+
+            //Return to product list page
+            Server.Transfer("~/Support/Product.aspx");
+
+            //MessageBox.Show(this,"Product has been Added");
+            //Clears the textboxes
+            //txtProductCode.Text = "";
+            //txtProductName.Text = "";
+            //txtProductRelease.Text = "";
+            //txtProductVersion.Text = "";
         }
+        
+        
+        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack) {
+                calReleaseDate.SelectedDate = DateTime.Today;
+            }
+        }
+
+      
+        
+        
         
         protected void btnProductAccept_Click(object sender, EventArgs e)
         {
-            Add();
+            if (Validator.CheckFields(new TextBox[] { txtProductCode, txtProductName, txtProductVersion }) && Validator.IsDecimal(txtProductVersion)) {
+                Add();
+            }
+        }
+
+        protected void btnProductCancel_Click(object sender, EventArgs e) {
+            Server.Transfer("~/Support/Product.aspx");
         }
 
     }

@@ -55,7 +55,7 @@ namespace AS3_TechSupport {
         }
 
         protected void btnAdd_Click(object sender, EventArgs e) {
-            if (txtName.Text != "" && txtAddress.Text != "" && txtCity.Text != "" && txtZip.Text != "") {
+            if (Validator.CheckFields(new TextBox[] {txtName, txtAddress, txtCity, txtZip})) {
                 Add();
             } else {
                 MessageBox.Show(
