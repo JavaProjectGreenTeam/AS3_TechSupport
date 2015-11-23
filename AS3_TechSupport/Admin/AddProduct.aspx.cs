@@ -41,17 +41,6 @@ namespace AS3_TechSupport
             
         }
         
-        
-        
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-      
-        
-        
-        
         protected void btnProductAccept_Click(object sender, EventArgs e)
         {
             Add();

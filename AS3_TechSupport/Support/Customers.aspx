@@ -30,7 +30,7 @@
                 <asp:Label ID="lblCustomerID2" runat="server" CssClass="label" Text="Customer ID:" Font-Size="Small"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtCustomerID" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtCustomerID" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -39,7 +39,7 @@
                 <asp:Label ID="lblName" runat="server" CssClass="label" Text="Name:" Font-Size="Small"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="txtName" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtName" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
             </td>
             <td class="auto-style1"></td>
         </tr>
@@ -48,7 +48,7 @@
                 <asp:Label ID="lblAddress" runat="server" CssClass="label" Text="Address:" Font-Size="Small"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtAddress" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtAddress" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -57,9 +57,9 @@
                 <asp:Label ID="lblCityStateZip" runat="server" CssClass="label" Text="City, State, Zip:" Font-Size="Small"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtCity" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Width="40px"></asp:TextBox>
-                <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Width="140px"></asp:TextBox>
+                <asp:TextBox ID="txtCity" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="txtState" runat="server" CssClass="textbox" Width="40px" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="txtZip" runat="server" CssClass="textbox" Width="140px" ReadOnly="True"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -68,7 +68,7 @@
                 <asp:Label ID="lblPhone" runat="server" CssClass="label" Text="Phone:" Font-Size="Small"></asp:Label>
             </td>
             <td class="auto-style1">
-                <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtPhone" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
             </td>
             <td class="auto-style1"></td>
         </tr>
@@ -77,7 +77,7 @@
                 <asp:Label ID="lblEmail" runat="server" CssClass="label" Text="Email:" Font-Size="Small"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="textbox" ReadOnly="True"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
