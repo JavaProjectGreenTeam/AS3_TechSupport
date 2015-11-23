@@ -191,6 +191,7 @@
     <Compile Include="Tech\ManageIncident.aspx.designer.cs">
       <DependentUpon>ManageIncident.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\Main.Master" />
