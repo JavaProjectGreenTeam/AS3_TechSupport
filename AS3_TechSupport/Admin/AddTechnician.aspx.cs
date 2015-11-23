@@ -33,7 +33,9 @@ namespace AS3_TechSupport
 
         protected void btnAddTechnician_Click(object sender, EventArgs e)
         {
-            AddTech();
+            if (Validator.CheckFields(new TextBox[] { txtTechName, txtTechEmail, txtTechPhone })) {
+                AddTech();
+            }
         }
         protected void AddTech()
         {

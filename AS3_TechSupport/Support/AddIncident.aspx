@@ -34,15 +34,6 @@
         </tr>
         <tr>
             <td class="auto-style1" style="text-align: right">
-                <asp:Label ID="lblIncidentID" runat="server" CssClass="label" Text="Incident ID:"></asp:Label>
-            </td>
-            <td class="auto-style2">
-                <asp:TextBox ID="txtIncidentID" runat="server" CssClass="textbox"></asp:TextBox>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style1" style="text-align: right">
     <asp:Label ID="lblDateOpened" runat="server" CssClass="label" Font-Size="Small" Text="Date Opened:"></asp:Label>
             </td>
             <td class="auto-style2">
@@ -60,19 +51,6 @@
             </td>
             <td>
                 <asp:Button ID="btnProductCode" runat="server" CssClass="button" OnClick="btnProductCode_Click" Text="Get Code" />
-                <asp:SqlDataSource ID="sqlProductName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT Name FROM Products"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlAddIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Incidents(CustomerID, ProductCode, DateOpened, Title, Description) VALUES (@CustomerID, @ProductCode, @DateOpened, @Title, @Description)" SelectCommand="SELECT * FROM [Incidents]"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlCustomerName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Customers]"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlProductCode" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [ProductCode] FROM [Products] WHERE ([Name] = @Name)">
-                    <SelectParameters>
-                        <asp:Parameter Name="Name" Type="String" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
-                <asp:SqlDataSource ID="sqlCustomerID" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [CustomerID] FROM [Customers] WHERE ([Name] = @Name)" InsertCommand="INSERT INTO Customers(CustomerID) VALUES (@CustomerID)">
-                    <SelectParameters>
-                        <asp:Parameter Name="Name" Type="String" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
             </td>
         </tr>
         <tr>
@@ -103,9 +81,31 @@
     <asp:TextBox ID="txtDescription" runat="server" CssClass="multilineTextbox textbox" Font-Size="Small" Rows="4" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btnAddIncident" runat="server" CssClass="button" OnClick="btnAddIncident_Click" Text="Add Incident" />
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1" style="text-align: right; vertical-align: top;">
+                &nbsp;</td>
+            <td class="auto-style2">
+                <asp:Button ID="btnAddIncident" runat="server" CssClass="buttonAuto" OnClick="btnAddIncident_Click" Text="Add Incident" Width="100%" />
             </td>
+            <td>
+                &nbsp;</td>
         </tr>
     </table>
-    <br />
+    <asp:SqlDataSource ID="sqlProductName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT Name FROM Products"></asp:SqlDataSource>
+    
+                <asp:SqlDataSource ID="sqlAddIncident" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" InsertCommand="INSERT INTO Incidents(CustomerID, ProductCode, DateOpened, Title, Description) VALUES (@CustomerID, @ProductCode, @DateOpened, @Title, @Description)" SelectCommand="SELECT * FROM [Incidents]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlCustomerName" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [Name] FROM [Customers]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlProductCode" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [ProductCode] FROM [Products] WHERE ([Name] = @Name)">
+                    <SelectParameters>
+                        <asp:Parameter Name="Name" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlCustomerID" runat="server" ConnectionString="<%$ ConnectionStrings:TechSupportDB %>" SelectCommand="SELECT [CustomerID] FROM [Customers] WHERE ([Name] = @Name)" InsertCommand="INSERT INTO Customers(CustomerID) VALUES (@CustomerID)">
+                    <SelectParameters>
+                        <asp:Parameter Name="Name" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                
 </asp:Content>

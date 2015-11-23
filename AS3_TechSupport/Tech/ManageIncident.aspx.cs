@@ -9,61 +9,66 @@ using System.Web.UI.WebControls;
 namespace AS3_TechSupport.Tech {
     public partial class ManageIncident : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
-            string selectedID = Request["incidentID"];
+            if (!IsPostBack) {
+                string selectedID = Request["incidentID"];
 
-            if (selectedID != "") {
-                //Clear sql parameters
-                sqlGetIncident.SelectParameters.Clear();
-
-                //Add sql parameters
-                sqlGetIncident.SelectParameters.Add("IncidentID", selectedID);
-
-                //Execute sql query
-                DataView incidentInfo = (DataView)sqlGetIncident.Select(new DataSourceSelectArguments());
-
-                //Populate text boxes from data
-                foreach (DataRowView infoRow in incidentInfo) {
-                    txtCustomerID.Text = infoRow["CustomerID"].ToString();
-                    txtIncidentID.Text = infoRow["IncidentID"].ToString();
-                    txtTechID.Text = infoRow["TechID"].ToString();
-                    txtDateOpened.Text = infoRow["DateOpened"].ToString();
-                    txtProductCode.Text = infoRow["ProductCode"].ToString();
-                    txtTitle.Text = infoRow["Title"].ToString();
-                    txtDescription.Text = infoRow["Description"].ToString();
-                }
-
-                if (txtTechID.Text != "") {
-
-                    //Resolve additional information
-                    //Clear sql paramaters
-                    sqlGetTechName.SelectParameters.Clear();
+                if (selectedID != "") {
+                    //Clear sql parameters
+                    sqlGetIncident.SelectParameters.Clear();
 
                     //Add sql parameters
-                    sqlGetTechName.SelectParameters.Add("TechID", txtTechID.Text);
+                    sqlGetIncident.SelectParameters.Add("IncidentID", selectedID);
 
                     //Execute sql query
-                    DataView techInfo = (DataView)sqlGetTechName.Select(new DataSourceSelectArguments());
+                    DataView incidentInfo = (DataView)sqlGetIncident.Select(new DataSourceSelectArguments());
 
-                    //Select value from drop down list
-                    ddlTechName.SelectedValue = techInfo[0]["Name"].ToString();
+                    //Populate text boxes from data
+                    foreach (DataRowView infoRow in incidentInfo) {
+                        txtCustomerID.Text = infoRow["CustomerID"].ToString();
+                        txtIncidentID.Text = infoRow["IncidentID"].ToString();
+                        txtTechID.Text = infoRow["TechID"].ToString();
+                        txtDateOpened.Text = infoRow["DateOpened"].ToString();
+                        txtProductCode.Text = infoRow["ProductCode"].ToString();
+                        txtTitle.Text = infoRow["Title"].ToString();
+                        txtDescription.Text = infoRow["Description"].ToString();
+                    }
+
+                    if (txtTechID.Text != "") {
+
+                        //Resolve additional information
+                        //Clear sql paramaters
+                        sqlGetTechName.SelectParameters.Clear();
+
+                        //Add sql parameters
+                        sqlGetTechName.SelectParameters.Add("TechID", txtTechID.Text);
+
+                        //Execute sql query
+                        DataView techInfo = (DataView)sqlGetTechName.Select(new DataSourceSelectArguments());
+
+                        //Select value from drop down list
+                        ddlTechName.SelectedValue = techInfo[0]["Name"].ToString();
+                    }
+
+                    //Resolve additional information
+                    //Clear sql parameters
+                    sqlCustomerName.SelectParameters.Clear();
+                    sqlProductName.SelectParameters.Clear();
+
+                    //Add sql parameters
+                    sqlCustomerName.SelectParameters.Add("CustomerID", txtCustomerID.Text);
+                    sqlProductName.SelectParameters.Add("ProductCode", txtProductCode.Text);
+
+                    //Execute sql querys
+                    DataView customerInfo = (DataView)sqlCustomerName.Select(new DataSourceSelectArguments());
+                    DataView productInfo = (DataView)sqlProductName.Select(new DataSourceSelectArguments());
+
+                    //Populate text boxes
+                    txtCustomerName.Text = customerInfo[0]["Name"].ToString();
+                    txtProductName.Text = productInfo[0]["Name"].ToString();
+
+                    //Set calendar selected date to current date
+                    calDateClosed.SelectedDate = DateTime.Today;
                 }
-
-                //Resolve additional information
-                //Clear sql parameters
-                sqlCustomerName.SelectParameters.Clear();
-                sqlProductName.SelectParameters.Clear();
-                
-                //Add sql parameters
-                sqlCustomerName.SelectParameters.Add("CustomerID", txtCustomerID.Text);
-                sqlProductName.SelectParameters.Add("ProductCode", txtProductCode.Text);
-
-                //Execute sql querys
-                DataView customerInfo = (DataView)sqlCustomerName.Select(new DataSourceSelectArguments());
-                DataView productInfo = (DataView)sqlProductName.Select(new DataSourceSelectArguments());
-
-                //Populate text boxes
-                txtCustomerName.Text = customerInfo[0]["Name"].ToString();
-                txtProductName.Text = productInfo[0]["Name"].ToString();
             }
         }
 
@@ -87,28 +92,32 @@ namespace AS3_TechSupport.Tech {
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e) {
-            //Clear sql paramaters
-            sqlUpdateIncident.UpdateParameters.Clear();
+            if (Validator.CheckFields(new TextBox[] { txtTechID })) {
+                //Clear sql paramaters
+                sqlUpdateIncident.UpdateParameters.Clear();
 
-            //Add sql parameters
-            sqlUpdateIncident.UpdateParameters.Add("IncidentID", txtIncidentID.Text);
-            sqlUpdateIncident.UpdateParameters.Add("TechID", txtTechID.Text);
+                //Add sql parameters
+                sqlUpdateIncident.UpdateParameters.Add("IncidentID", txtIncidentID.Text);
+                sqlUpdateIncident.UpdateParameters.Add("TechID", txtTechID.Text);
 
-            //Execute sql query
-            sqlUpdateIncident.Update();
+                //Execute sql query
+                sqlUpdateIncident.Update();
+            }
         }
 
         protected void btnClose_Click(object sender, EventArgs e) {
-            //Clear sql paramaters
-            sqlCloseIncident.UpdateParameters.Clear();
+            if (Validator.CheckFields(new TextBox[] { txtTechID })) {
+                //Clear sql paramaters
+                sqlCloseIncident.UpdateParameters.Clear();
 
-            //Add sql parameters
-            sqlCloseIncident.UpdateParameters.Add("IncidentID", txtIncidentID.Text);
-            sqlCloseIncident.UpdateParameters.Add("TechID", txtTechID.Text);
-            sqlCloseIncident.UpdateParameters.Add("DateClosed", DbType.DateTime, calDateClosed.SelectedDate.ToString());
+                //Add sql parameters
+                sqlCloseIncident.UpdateParameters.Add("IncidentID", txtIncidentID.Text);
+                sqlCloseIncident.UpdateParameters.Add("TechID", txtTechID.Text);
+                sqlCloseIncident.UpdateParameters.Add("DateClosed", DbType.DateTime, calDateClosed.SelectedDate.ToString());
 
-            //Execute sql query
-            sqlCloseIncident.Update();
+                //Execute sql query
+                sqlCloseIncident.Update();
+            }
         }
     }
 }
