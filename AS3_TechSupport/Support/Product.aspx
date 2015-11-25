@@ -21,10 +21,10 @@
     <table style="width:100%;">
         <tr>
             <td class="auto-style4">
-                <asp:Button ID="btnFirst" runat="server" CssClass="buttonAuto" Text="&lt;&lt;" OnClick="btnFirst_Click" />
-                <asp:Button ID="btnPrevious" runat="server" CssClass="buttonAuto" Text="&lt;" OnClick="btnPrevious_Click" />
-                <asp:Button ID="btnNext" runat="server" CssClass="buttonAuto" Text="&gt;" OnClick="btnNext_Click" />
-                <asp:Button ID="btnLast" runat="server" CssClass="buttonAuto" Text="&gt;&gt;" OnClick="btnLast_Click" />
+                <asp:Button ID="btnFirst" runat="server" CssClass="buttonAuto" Text="&lt;&lt;" OnClick="btnFirst_Click" ToolTip="First" />
+                <asp:Button ID="btnPrevious" runat="server" CssClass="buttonAuto" Text="&lt;" OnClick="btnPrevious_Click" ToolTip="Previous" />
+                <asp:Button ID="btnNext" runat="server" CssClass="buttonAuto" Text="&gt;" OnClick="btnNext_Click" ToolTip="Next" />
+                <asp:Button ID="btnLast" runat="server" CssClass="buttonAuto" Text="&gt;&gt;" OnClick="btnLast_Click" ToolTip="Last" />
                 <asp:Button ID="btnShowAll" runat="server" CssClass="buttonAuto" OnClick="btnShowAll_Click" Text="Show All" />
             </td>
             <td class="auto-style6" style="text-align: right">
