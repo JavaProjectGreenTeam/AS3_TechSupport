@@ -112,6 +112,9 @@ namespace AS3_TechSupport.Tech {
 
                 //Execute sql query
                 sqlUpdateIncident.Update();
+
+                //Redirect to IncidentList after updating
+                Server.Transfer("~/Tech/IncidentList.aspx");
             }
         }
 
@@ -127,6 +130,9 @@ namespace AS3_TechSupport.Tech {
 
                 //Execute sql query
                 sqlCloseIncident.Update();
+
+                //Redirect to IncidentList after updating
+                Server.Transfer("~/Tech/IncidentList.aspx");
             }
         }
     }
