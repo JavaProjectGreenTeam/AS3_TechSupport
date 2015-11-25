@@ -45,7 +45,7 @@ namespace AS3_TechSupport {
             DataView techInfo = (DataView)sqlGetTech.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (techInfo.Count > 0) {
+            if (techInfo != null && techInfo.Count > 0) {
                 SetDataSource(sqlGetTech);
                 hfTechID.Value = techInfo[0]["TechID"].ToString();
             }
@@ -56,7 +56,7 @@ namespace AS3_TechSupport {
             DataView techInfo = (DataView)sqlAllTechs.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (techInfo.Count > 0) {
+            if (techInfo != null && techInfo.Count > 0) {
                 SetDataSource(sqlAllTechs);
             }
         }
@@ -66,7 +66,7 @@ namespace AS3_TechSupport {
             DataView techInfo = (DataView)sqlFirst.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (techInfo.Count > 0) {
+            if (techInfo != null && techInfo.Count > 0) {
                 SetDataSource(sqlFirst);
                 hfTechID.Value = techInfo[0]["TechID"].ToString();
             }
@@ -94,7 +94,7 @@ namespace AS3_TechSupport {
             DataView techInfo = (DataView)sqlNext.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (techInfo.Count > 0) {
+            if (techInfo != null && techInfo.Count > 0) {
                 SetDataSource(sqlNext);
                 hfTechID.Value = techInfo[0]["TechID"].ToString();
             }
@@ -111,7 +111,7 @@ namespace AS3_TechSupport {
             DataView techInfo = (DataView)sqlPrevious.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (techInfo.Count > 0) {
+            if (techInfo != null && techInfo.Count > 0) {
                 SetDataSource(sqlPrevious);
                 hfTechID.Value = techInfo[0]["TechID"].ToString();
             }

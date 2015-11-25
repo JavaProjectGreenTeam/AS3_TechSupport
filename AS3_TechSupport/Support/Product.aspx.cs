@@ -72,7 +72,7 @@ namespace AS3_TechSupport
             DataView productInfo = (DataView)sqlFirst.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (productInfo.Count > 0) {
+            if (productInfo != null && productInfo.Count > 0) {
                 SetDataSource(sqlFirst);
                 hfProductCode.Value = productInfo[0]["ProductCode"].ToString();
             }
@@ -83,7 +83,7 @@ namespace AS3_TechSupport
             DataView productInfo = (DataView)sqlLast.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (productInfo.Count > 0) {
+            if (productInfo != null && productInfo.Count > 0) {
                 SetDataSource(sqlLast);
                 hfProductCode.Value = productInfo[0]["ProductCode"].ToString();
             }
@@ -100,7 +100,7 @@ namespace AS3_TechSupport
             DataView productInfo = (DataView)sqlNext.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (productInfo.Count > 0) {
+            if (productInfo != null && productInfo.Count > 0) {
                 SetDataSource(sqlNext);
                 hfProductCode.Value = productInfo[0]["ProductCode"].ToString();
             }
@@ -117,7 +117,7 @@ namespace AS3_TechSupport
             DataView productInfo = (DataView)sqlPrevious.Select(new DataSourceSelectArguments());
 
             //Set values from data
-            if (productInfo.Count > 0) {
+            if (productInfo != null && productInfo.Count > 0) {
                 SetDataSource(sqlPrevious);
                 hfProductCode.Value = productInfo[0]["ProductCode"].ToString();
             }
