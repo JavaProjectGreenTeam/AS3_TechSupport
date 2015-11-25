@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*****************
+ * Joseph Meagalli 5050630103
+ * Ryan Gallagher 
+ * Nick Lambell 3100298414
+ * Version 1.0
+ * bugs: none so far
+ */
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -8,7 +15,7 @@ using System.Web.UI.WebControls;
 
 namespace AS3_TechSupport {
     public partial class CustomerIncidents : System.Web.UI.Page {
-
+        
         protected void Page_Load(object sender, EventArgs e) {
             if (Request.IsAuthenticated) {
                 if (User.IsInRole("Admins") || User.IsInRole("Technicians")) {
@@ -61,11 +68,13 @@ namespace AS3_TechSupport {
 
         protected void btnAddIncident_Click(object sender, EventArgs e)
         {
+            //redirects to AddIncident
             Response.Redirect("~/Support/AddIncident.aspx");
         }
 
         protected void btnManageIncidents_Click(object sender, EventArgs e)
         {
+            //redirects to IncidentList
             Response.Redirect("~/Tech/IncidentList.aspx");
         }
     }

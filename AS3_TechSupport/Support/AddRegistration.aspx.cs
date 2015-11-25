@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*****************
+ * Joseph Meagalli 5050630103
+ * Ryan Gallagher 
+ * Nick Lambell 3100298414
+ * Version 1.0
+ * bugs: none so far
+ */
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,6 +22,7 @@ namespace AS3_TechSupport
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //creates a string for the DateTime function
             string regDate = DateTime.Today.ToString("dd/MM/yyyy");
             txtRegDate.Text = regDate;
         }

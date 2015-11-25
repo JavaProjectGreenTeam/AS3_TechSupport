@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*****************
+ * Joseph Meagalli 5050630103
+ * Ryan Gallagher 
+ * Nick Lambell 3100298414
+ * Version 1.0
+ * bugs: none so far
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;

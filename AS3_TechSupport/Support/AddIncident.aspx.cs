@@ -1,8 +1,10 @@
-﻿/**********
- * Joseph Meagalli
- * 5050630103
- * Team Green
- */  
+﻿/*****************
+ * Joseph Meagalli 5050630103
+ * Ryan Gallagher 
+ * Nick Lambell 3100298414
+ * Version 1.0
+ * bugs: none so far
+ */
 
 using System;
 using System.Collections.Generic;
@@ -24,6 +26,7 @@ namespace AS3_TechSupport
 
         protected void btnAddIncident_Click(object sender, EventArgs e)
         {
+            //will check if the fields are valid
             if (Validator.CheckFields(new TextBox[] { txtCustomerID2, txtProductCode, txtTitle, txtDescription })) {
                 Add();
             }
