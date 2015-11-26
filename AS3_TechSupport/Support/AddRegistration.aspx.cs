@@ -62,7 +62,7 @@ namespace AS3_TechSupport
             //inserting parameters
             sqlAddRegistration.InsertParameters.Add("CustomerID", customerID);
             sqlAddRegistration.InsertParameters.Add("ProductCode", productCode);
-            sqlAddRegistration.InsertParameters.Add("RegDate", txtRegDate.Text);
+            sqlAddRegistration.InsertParameters.Add("RegDate", DbType.DateTime, DateTime.Parse(txtRegDate.Text).ToString());
             try
             {
                 sqlAddRegistration.Insert();
